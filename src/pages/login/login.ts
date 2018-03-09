@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 
 /**
- * Generated class for the AboutPage page.
+ * Generated class for the LoginPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +11,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html',
+  selector: 'page-login',
+  templateUrl: 'login.html',
 })
-export class AboutPage {
+export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AboutPage');
+    console.log('ionViewDidLoad LoginPage');
+  }
+
+  navLogin()
+  {
+    this.navCtrl.setRoot(TabsPage)
+  }
+  navSignup()
+  {
+    this.navCtrl.push('SignupPage')
   }
 
 }
