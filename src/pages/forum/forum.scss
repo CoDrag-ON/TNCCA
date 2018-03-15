@@ -1,3 +1,65 @@
 page-forum {
 
+    .container{
+
+        background:  
+        linear-gradient(181deg, rgba(100,200,255,0.6), rgba(0, 0, 0, 0.9)),
+    
+    }
+    .msg-container
+    {
+        list-style: none;
+    }
+    .input
+    {
+        padding: 0px;
+    }
+    .input ion-row
+    {
+        padding: 0px;
+    }
+    .input ion-col
+    {
+        padding: 0px;
+    }
+    
+    .msg-container ul ion-card
+    {
+        background-color: white;
+        box-shadow: 2px 1px 2px #272727;
+        display: flex;
+        height: auto;
+        overflow-y: scroll;
+    }
+    
+    .msg-container ul ion-card ion-card-header
+    {
+        background-color: #01579B;
+        flex:auto;
+    }
+    
+    .msg-container ul ion-card ion-card-content{
+        flex:10;
+        padding-top:5px;
+        background-color: #E3F2FD;
+        color: #E1F5FE
+        
+    }
+    
+    .msg-container ul ion-card ion-card-content p{
+        padding:5px;
+        color: #000
+        
+    }
+    
+    ion-footer
+    {
+        background-color: #eee;
+        z-index: 3;
+    }
+    .msg-input
+    {
+        height: 20px;
+    }
+
 }

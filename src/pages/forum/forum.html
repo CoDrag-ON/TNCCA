@@ -7,20 +7,37 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Forum</ion-title>
+    <ion-title>Chats</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content small class="container">
+
+    <ul class="msg-container">
+        <li *ngFor="let message of Messages | async">
+            <ion-card color ="divider">
+            
+                <ion-card-header >
+                  {{message.name}}
+                </ion-card-header>
+              
+                <ion-card-content color="dark">
+                   <p>{{message.msg}}</p>
+                  
+                </ion-card-content>
+              
+              </ion-card>
+            </li>
+      </ul>
 
 </ion-content>
 <ion-footer>
   <ion-grid>
     <ion-row>
-      <ion-input type="text" placeholder="Message" ></ion-input>
-      <button ion-button small clear icon-only>
+      <ion-textarea class="msg-input" type="text" [(ngModel)]="message" placeholder="Message" ></ion-textarea>
+      <button center ion-button (click)="sendMsg()" small clear icon-only>
           <ion-icon name="md-send"></ion-icon>
       </button>
   </ion-row>

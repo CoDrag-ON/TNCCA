@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { MessageProvider } from '../../providers/message/message';
+import {Observable} from 'rxjs';
 
-/**
- * Generated class for the ForumPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { LoadingController } from 'ionic-angular';
+
 
 @IonicPage()
 @Component({
@@ -14,12 +12,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'forum.html',
 })
 export class ForumPage {
+  Messages:Observable<any[]>
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  message:string;
+
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams,
+    private msg:MessageProvider,
+    public loadingCtrl: LoadingController) {
+
+    this.Messages =  this.msg.getMessage();
+    this.presentLoading();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ForumPage');
+  sendMsg()
+  {
+    this.msg.sendMsg("name",this.message)
+    this.message = ""
   }
+
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000
+    });
+    loader.present();
+  }
+
+ 
 
 }
