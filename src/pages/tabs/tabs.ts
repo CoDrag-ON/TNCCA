@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {  NavController } from 'ionic-angular';
+import { ForumPage } from '../forum/forum';
 
 
 @Component({
@@ -6,11 +8,15 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  tab1Root = 'ForumPage';
   tab2Root = 'SongsPage';
   tab3Root = 'AboutPage';
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
 
+  }
+
+  openChat()
+  {
+    this.navCtrl.push(ForumPage)
   }
 }

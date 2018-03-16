@@ -1,5 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cyril</ion-title>
+    
+      <ion-buttons start>
+        <button ion-button icon-only (click)="openChat()" color="primary">
+          <ion-icon name="md-chatbubbles"></ion-icon>
+        </button>
+      </ion-buttons>
+    
+  </ion-navbar>
+
+</ion-header>
 <ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Chat" tabIcon="md-chatbubbles"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="Songs" tabIcon="md-musical-notes"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="About Me" tabIcon="md-contact"></ion-tab>
 </ion-tabs>

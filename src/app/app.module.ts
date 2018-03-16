@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { MessageProvider } from '../providers/message/message';
 import { HttpClientModule } from '@angular/common/http';
+import { ForumPage } from '../pages/forum/forum';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -31,6 +32,7 @@ export const firebaseConfig = {
     MyApp,
     TabsPage,
     LoginPage,
+    ForumPage
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ export const firebaseConfig = {
     MyApp,
     LoginPage,
     TabsPage,
+    ForumPage
   ],
   providers: [
     StatusBar,
