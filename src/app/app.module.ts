@@ -1,3 +1,5 @@
+import { PaymentPage } from './../pages/payment/payment';
+import { AdminPage } from './../pages/admin/admin';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -15,7 +17,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { MessageProvider } from '../providers/message/message';
 import { HttpClientModule } from '@angular/common/http';
+
 import { ForumPage } from '../pages/forum/forum';
+import { AccountsPage } from '../pages/accounts/accounts';
+import { SpendDeatailPage } from '../pages/spend-deatail/spend-deatail';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -32,7 +37,12 @@ export const firebaseConfig = {
     MyApp,
     TabsPage,
     LoginPage,
-    ForumPage
+    ForumPage,
+    AccountsPage,
+    AdminPage,
+    PaymentPage,
+    SpendDeatailPage
+  
   ],
   imports: [
     BrowserModule,
@@ -46,7 +56,12 @@ export const firebaseConfig = {
     MyApp,
     LoginPage,
     TabsPage,
-    ForumPage
+    ForumPage,
+    AccountsPage,
+    AccountsPage,
+    AdminPage,
+    PaymentPage,
+    SpendDeatailPage
   ],
   providers: [
     StatusBar,
