@@ -1,10 +1,7 @@
 page-forum {
 
     .container{
-
-        background:  
-        linear-gradient(181deg, rgba(100,200,255,0.6), rgba(0, 0, 0, 0.9)),
-    
+      
     }
     .msg-container
     {
@@ -30,6 +27,7 @@ page-forum {
         display: flex;
         height: auto;
         overflow-y: scroll;
+        
     }
     
     .msg-container ul ion-card ion-card-header
