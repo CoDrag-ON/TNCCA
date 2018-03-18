@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SignupPage {
 
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 258bfd36ff060440e7fcae13c9d0b17f3c2b91f8
   NewUser:any;
 
   Con_Pass:string;
