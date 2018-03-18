@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AuthProvider } from '../../providers/auth/auth';
 
 /**
  * Generated class for the SignupPage page.
@@ -15,14 +16,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SignupPage {
 
-<<<<<<< HEAD
   
-=======
 
->>>>>>> 258bfd36ff060440e7fcae13c9d0b17f3c2b91f8
   NewUser:any;
 
-  Con_Pass:string;
+  ConPass:string;
 
   Name:string;
   DOB:string;
@@ -32,14 +30,15 @@ export class SignupPage {
   Diocese:string;
   TNCCA_zone:string;
   Aadhar_id:number;
-  Role_in_Choir:string;
-  Number:number;
-  Mail_id:string;
-  About_me:string;
-  password:string;
+  Role_in_choir:string;
+  Mobile:number;
+  Email_id:string;
+  About:string;
+  Password:string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    private auth:AuthProvider) {
   }
 
   ionViewDidLoad() {
@@ -48,22 +47,35 @@ export class SignupPage {
   }
   signup()
   {
-    this.NewUser.Name = this.Name;
-    this.NewUser.DOB = this.DOB;
-    this.NewUser.Place = this.Place;
-    this.NewUser.City = this.City;
-    this.NewUser.Parish = this.Parish;
-    this.NewUser.Diocese = this.Diocese;
-    this.NewUser.TNCCA_zone = this.TNCCA_zone;
-    this.NewUser.Aadhar_id = this.Aadhar_id;
-    this.NewUser.Role_in_choir = this.Role_in_Choir;
-    this.NewUser.Mobile = this.Number;
-    this.NewUser.Email_id = this.Mail_id;
-    this.NewUser.About = this.About_me;
-    this.NewUser.Password = this.password;
-    
+    this.auth.insertUser(
+      this.Name,
+      this.DOB,
+      this.Place,
+      this.City,
+      this.Parish,
+      this.Diocese,
+      this.TNCCA_zone,
+      this.Aadhar_id,
+      this.Role_in_choir,
+      this.Mobile,
+      this.Email_id,
+      this.About,
+      this.Password);
 
-    console.log(this.NewUser);
+      console.log(this.Name,
+        this.DOB,
+        this.Place,
+        this.City,
+        this.Parish,
+        this.Diocese,
+        this.TNCCA_zone,
+        this.Aadhar_id,
+        this.Role_in_choir,
+        this.Mobile,
+        this.Email_id,
+        this.About,
+        this.Password);
+    
 
   }
 
