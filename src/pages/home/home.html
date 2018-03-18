@@ -6,13 +6,32 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>home</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+      <ion-title>Events</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
 
-</ion-header>
+
+<ion-content >
+  <ul>
+    <li class="mlist" *ngFor="let event of Events" >
+      <ion-card>
+          <ion-card-header>
+            {{event?.title}}
+          </ion-card-header>
+          <ion-card-content>
+              {{event?.body}}          
+            </ion-card-content>
+        </ion-card>
+      </li>
+  </ul>
 
 
-<ion-content padding>
 
 </ion-content>
+
+<ion-footer>
+    <button ion-button block full small (click)="addNews()" > Post Event </button>
+  </ion-footer>
+

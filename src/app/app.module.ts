@@ -17,6 +17,10 @@ import { MessageProvider } from '../providers/message/message';
 import { HttpClientModule } from '@angular/common/http';
 import { ForumPage } from '../pages/forum/forum';
 import { AuthProvider } from '../providers/auth/auth';
+import { NewsProvider } from '../providers/news/news';
+import { AddNewsPage } from '../pages/add-news/add-news';
+import { ToastProvider } from '../providers/toast/toast';
+import { HttpModule } from '@angular/http';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -33,7 +37,8 @@ export const firebaseConfig = {
     MyApp,
     TabsPage,
     LoginPage,
-    ForumPage
+    ForumPage,
+    AddNewsPage
   ],
   imports: [
     BrowserModule,
@@ -41,21 +46,25 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     LoginPage,
     TabsPage,
-    ForumPage
+    ForumPage,
+    AddNewsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MessageProvider,
-    AuthProvider
+    AuthProvider,
+    NewsProvider,
+    ToastProvider
   ]
 })
 export class AppModule {}

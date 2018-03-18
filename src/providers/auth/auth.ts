@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
-import {  ToastController } from 'ionic-angular';
+import { ToastProvider } from '../toast/toast';
 
 
 
@@ -12,7 +12,7 @@ import {  ToastController } from 'ionic-angular';
 @Injectable()
 export class AuthProvider {
 
-  constructor(public http: HttpClient,public toastCtrl  : ToastController) {
+  constructor(public http: HttpClient,private toast:ToastProvider) {
   }
 
   insertUser(Name,DOB,Place,City,Parish,Diocese,TNCCA_zone,Aadhar_id,Role_in_choir,Mobile,Email_id,About,Password)
@@ -33,38 +33,16 @@ export class AuthProvider {
       {
          // If the request was successful notify the user
          
-         this.sendSucessNotification(`your account has ben created: ${Name}`);
+         this.toast.sendToast(`your account has ben created: ${Name}`);
       },
       (error : any) =>
       {
-         this.sendFailureNotification('Something went wrong!');
+        this.toast.sendToast('Something went wrong!');
          console.log(error)
       });
 
   }
 
-  sendSucessNotification(message : string)  : void
-   {
-      let notification = this.toastCtrl.create({
-          message       : message,
-          duration      : 1000,
-          position      :'top',
-          dismissOnPageChange: false,
-          cssClass: "sucess_notification",
-      });
-      notification.present();
-   }
-
-   sendFailureNotification(message : string)  : void
-   {
-      let notification = this.toastCtrl.create({
-          message       : message,
-          duration      : 1000,
-          position      :'top',
-          dismissOnPageChange: false,
-          cssClass: "fail_notification",
-      });
-      notification.present();
-   }
+  
 
 }

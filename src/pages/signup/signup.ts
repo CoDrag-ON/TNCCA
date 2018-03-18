@@ -75,6 +75,7 @@ export class SignupPage {
         this.Email_id,
         this.About,
         this.Password);
+        this.navCtrl.pop()
     
 
   }

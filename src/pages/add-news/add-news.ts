@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AddNewsPage } from '../add-news/add-news';
 import { NewsProvider } from '../../providers/news/news';
 
 /**
- * Generated class for the HomePage page.
+ * Generated class for the AddNewsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,32 +11,30 @@ import { NewsProvider } from '../../providers/news/news';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-add-news',
+  templateUrl: 'add-news.html',
 })
-export class HomePage {
+export class AddNewsPage {
 
-  Events:any;
+  title:string;
+  body:string;
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
     private news:NewsProvider) {
-
-     
-    
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-    this.news.getNews().subscribe((data)=>
-    {
-      this.Events = data
-      console.log(data)
-    });
+    console.log('ionViewDidLoad AddNewsPage');
   }
 
-  addNews(){
-    this.navCtrl.push(AddNewsPage)
+  addEvent(){
+    this,this.news.insertEvent(this.title,this.body);
+    this.navCtrl.pop()
   }
- 
+  cancel()
+  {
+    this.navCtrl.pop()
+  }
+
 }
