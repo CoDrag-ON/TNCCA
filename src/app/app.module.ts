@@ -16,6 +16,7 @@ import { LoginPage } from '../pages/login/login';
 import { MessageProvider } from '../providers/message/message';
 import { HttpClientModule } from '@angular/common/http';
 import { ForumPage } from '../pages/forum/forum';
+import { AuthProvider } from '../providers/auth/auth';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -52,7 +53,8 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MessageProvider
+    MessageProvider,
+    AuthProvider
   ]
 })
 export class AppModule {}

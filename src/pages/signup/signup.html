@@ -9,13 +9,13 @@
 
 <ion-content padding>
 
-    <ion-list>
+    <ion-list inset>
 
         <ion-item>
           <ion-input [(ngModel)]="Name" type="text" placeholder="User Name"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-datetime [(ngModel)]="DOB" dispalyFormat="dd/mm/yyyy" pickerFormat="DD MM YYYY" placeholder="Date of Birth" ></ion-datetime>
+        <ion-datetime [(ngModel)]="DOB" dispalyFormat="dd/mm/yyyy" pickerFormat="DD MM YYYY" placeholder="Date of Birth" ></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-input [(ngModel)]="Place" type="text" placeholder="Place" ></ion-input>
@@ -58,6 +58,8 @@
 
       
     </ion-list>
+    <p>{{name}}</p>
+
 
 </ion-content>
 <ion-footer>

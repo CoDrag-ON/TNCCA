@@ -1,4 +1,3 @@
-import { user } from './../../model/user.interface';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -16,8 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SignupPage {
 
-
-  NewUser:user;
+  
+  NewUser:any;
 
   Con_Pass:string;
 
@@ -58,6 +57,7 @@ export class SignupPage {
     this.NewUser.Email_id = this.Mail_id;
     this.NewUser.About = this.About_me;
     this.NewUser.Password = this.password;
+    
 
     console.log(this.NewUser);
 
