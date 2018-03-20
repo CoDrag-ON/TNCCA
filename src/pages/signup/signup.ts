@@ -16,8 +16,11 @@ import { AuthProvider } from '../../providers/auth/auth';
 })
 export class SignupPage {
 
+<<<<<<< HEAD
+=======
   
 
+>>>>>>> 38d81d38c5f49eaff9a108726f3ca0bbacbcf1bd
   NewUser:any;
 
   ConPass:string;
