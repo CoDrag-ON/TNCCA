@@ -15,30 +15,18 @@ export class AuthProvider {
   constructor(public http: HttpClient,private toast:ToastProvider) {
   }
 
-<<<<<<< HEAD
-  insertUser(name,dob,place,city,parish,diocese,tncca_zone,aadhar,role_in_choir,mobile,email,about,pass)
-=======
   insertUser(Name,DOB,Place,City,Parish,Diocese,TNCCA_zone,Aadhar_id,Role_in_choir,Mobile,Email_id,About,Password)
->>>>>>> 38d81d38c5f49eaff9a108726f3ca0bbacbcf1bd
   {
   	let URI = "https://figurable-jack.000webhostapp.com/cyril/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
-<<<<<<< HEAD
-          options   : any    = { "key" : "create", "name" : name,"dob":dob,"place":place,"city":city,"parish":parish,"diocese":diocese,"tncca_zone":tncca_zone,"aadhar":aadhar,"role_in_choir":role_in_choir,"moblie":mobile, "email" : email, "password" : pass },
-=======
           options   : any    = { "key" : "create", "name" : Name,
            "dob" : DOB, "place" : Place, "city" : City,
         "parish":Parish,"diocese":Diocese,"TNCCA_zone":TNCCA_zone,
         "aadhar":Aadhar_id,"role_in_choir":Role_in_choir,
       "mobile":Mobile,"email":Email_id,"about":About,"password":Password},
       
-<<<<<<< HEAD
-          url       : any        = URI+ "user.php";
-=======
->>>>>>> 38d81d38c5f49eaff9a108726f3ca0bbacbcf1bd
           url       : any        = URI+ "connection.php";
->>>>>>> 7d188af16ad927642323d36ff747263d0fb03ffc
 
       this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data : any) =>
@@ -55,7 +43,6 @@ export class AuthProvider {
 
   }
 
-<<<<<<< HEAD
   getAllUser()
   {
     return this.http.get("https://figurable-jack.000webhostapp.com/cyril/get_all_user.php")
@@ -74,34 +61,8 @@ export class AuthProvider {
       
   }
 
-=======
-<<<<<<< HEAD
-  sendSucessNotification(message : string)  : void
-   {
-      let notification = this.toastCtrl.create({
-          message       : message,
-          duration      : 1000,
-          position      :'top',
-          dismissOnPageChange: false,
-          cssClass: "sucess_notification",
-      });
-      notification.present();
-   }
 
-   sendFailureNotification(message : string)  : void
-   {
-      let notification = this.toastCtrl.create({
-          message       : message,
-          duration      : 1000,
-          position      :'top',
-          dismissOnPageChange: false,
-          cssClass: "fail_notification",
-      });
-      notification.present();
-   }
-=======
->>>>>>> 7d188af16ad927642323d36ff747263d0fb03ffc
+
   
->>>>>>> 38d81d38c5f49eaff9a108726f3ca0bbacbcf1bd
 
 }
