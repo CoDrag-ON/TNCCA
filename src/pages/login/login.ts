@@ -37,8 +37,8 @@ export class LoginPage {
       this.navCtrl.setRoot(AdminPage)
     }
     else{
-      //this.auth.login(this.email,this.password).subscribe(data=>console.log(data))
-      this.navCtrl.setRoot(TabsPage)
+      this.auth.login(this.email,this.password).subscribe(data=>console.log(data))
+      //this.navCtrl.setRoot(TabsPage)
 
     }
   }
