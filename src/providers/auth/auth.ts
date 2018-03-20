@@ -21,12 +21,12 @@ export class AuthProvider {
     console.log('Hello AuthProvider Provider');
   }
 
-  insertUser(name,dob,p,year)
+  insertUser(name,dob,place,city,parish,diocese,tncca_zone,aadhar,role_in_choir,mobile,email,about,pass)
   {
   	let URI = "https://figurable-jack.000webhostapp.com/php/swat/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
-          options   : any    = { "key" : "create", "name" : name, "password" : pass, "email" : email, "year" : year },
+          options   : any    = { "key" : "create", "name" : name,"dob":dob,"place":place,"city":city,"parish":parish,"diocese":diocese,"tncca_zone":tncca_zone,"aadhar":aadhar,"role_in_choir":role_in_choir,"moblie":mobile, "email" : email, "password" : pass },
           url       : any        = URI+ "connection.php";
 
       this.http.post(url, JSON.stringify(options), headers)
@@ -57,7 +57,7 @@ export class AuthProvider {
 
    sendFailureNotification(message : string)  : void
    {
-      let notification la= this.toastCtrl.create({
+      let notification = this.toastCtrl.create({
           message       : message,
           duration      : 1000,
           position      :'top',
