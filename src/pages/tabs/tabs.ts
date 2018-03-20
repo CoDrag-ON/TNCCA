@@ -7,6 +7,7 @@ import { ForumPage } from '../forum/forum';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
+  tab1Root = 'HomePage';
 
   tab2Root = 'SongsPage';
   tab3Root = 'AboutPage';

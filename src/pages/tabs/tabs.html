@@ -3,8 +3,8 @@
   <ion-navbar color="danger">
     <ion-title>Cyril</ion-title>
     
-      <ion-buttons start>
-        <button ion-button icon-only (click)="openChat()" color="primary">
+      <ion-buttons  start>
+        <button ion-button icon-only (click)="openChat()" color="light">
           <ion-icon name="md-chatbubbles"></ion-icon>
         </button>
       </ion-buttons>
@@ -13,6 +13,8 @@
 
 </ion-header>
 <ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="News" tabIcon="md-paper"></ion-tab>
+
   <ion-tab [root]="tab2Root" tabTitle="Songs" tabIcon="md-musical-notes"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="About Me" tabIcon="md-contact"></ion-tab>
 </ion-tabs>
