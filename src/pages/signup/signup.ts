@@ -16,14 +16,11 @@ import { AuthProvider } from '../../providers/auth/auth';
 })
 export class SignupPage {
 
-<<<<<<< HEAD
-=======
-  
 
->>>>>>> 38d81d38c5f49eaff9a108726f3ca0bbacbcf1bd
+
   NewUser:any;
 
-  ConPass:string;
+  Con_Pass:string;
 
   Name:string;
   DOB:string;
@@ -33,15 +30,14 @@ export class SignupPage {
   Diocese:string;
   TNCCA_zone:string;
   Aadhar_id:number;
-  Role_in_choir:string;
-  Mobile:number;
-  Email_id:string;
-  About:string;
-  Password:string;
+  Role_in_Choir:string;
+  Number:number;
+  Mail_id:string;
+  About_me:string;
+  password:string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    private auth:AuthProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams ,private auth:AuthProvider) {
   }
 
   ionViewDidLoad() {
@@ -50,36 +46,15 @@ export class SignupPage {
   }
   signup()
   {
-    this.auth.insertUser(
-      this.Name,
-      this.DOB,
-      this.Place,
-      this.City,
-      this.Parish,
-      this.Diocese,
-      this.TNCCA_zone,
-      this.Aadhar_id,
-      this.Role_in_choir,
-      this.Mobile,
-      this.Email_id,
-      this.About,
-      this.Password);
+   
 
-      console.log(this.Name,
-        this.DOB,
-        this.Place,
-        this.City,
-        this.Parish,
-        this.Diocese,
-        this.TNCCA_zone,
-        this.Aadhar_id,
-        this.Role_in_choir,
-        this.Mobile,
-        this.Email_id,
-        this.About,
-        this.Password);
-        this.navCtrl.pop()
+    this.auth.insertUser(this.Name,this.DOB,this.Place,this.City,this.Parish,this.Diocese,this.TNCCA_zone,this.Aadhar_id,
+      this.Role_in_Choir,this.Number,this.Mail_id,this.About_me,this.password)
+
+
     
+      this.navCtrl.pop()
+    console.log(this.NewUser);
 
   }
 

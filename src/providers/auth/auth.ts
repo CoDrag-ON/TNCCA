@@ -15,7 +15,10 @@ export class AuthProvider {
   constructor(public http: HttpClient,private toast:ToastProvider) {
   }
 
+
+
   insertUser(Name,DOB,Place,City,Parish,Diocese,TNCCA_zone,Aadhar_id,Role_in_choir,Mobile,Email_id,About,Password)
+
   {
   	let URI = "https://figurable-jack.000webhostapp.com/cyril/";
 
@@ -26,6 +29,7 @@ export class AuthProvider {
         "aadhar":Aadhar_id,"role_in_choir":Role_in_choir,
       "mobile":Mobile,"email":Email_id,"about":About,"password":Password},
       
+
           url       : any        = URI+ "user.php";
 
       this.http.post(url, JSON.stringify(options), headers)
@@ -61,8 +65,5 @@ export class AuthProvider {
       
   }
 
-
-
-  
 
 }
