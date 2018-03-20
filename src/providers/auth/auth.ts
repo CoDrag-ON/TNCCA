@@ -16,14 +16,19 @@ export class AuthProvider {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   insertUser(name,dob,place,city,parish,diocese,tncca_zone,aadhar,role_in_choir,mobile,email,about,pass)
 =======
   insertUser(Name,DOB,Place,City,Parish,Diocese,TNCCA_zone,Aadhar_id,Role_in_choir,Mobile,Email_id,About,Password)
 >>>>>>> 38d81d38c5f49eaff9a108726f3ca0bbacbcf1bd
+=======
+  insertUser(name,dob,p,year)
+>>>>>>> parent of 327f06b... zxa
   {
   	let URI = "https://figurable-jack.000webhostapp.com/cyril/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+<<<<<<< HEAD
 <<<<<<< HEAD
           options   : any    = { "key" : "create", "name" : name,"dob":dob,"place":place,"city":city,"parish":parish,"diocese":diocese,"tncca_zone":tncca_zone,"aadhar":aadhar,"role_in_choir":role_in_choir,"moblie":mobile, "email" : email, "password" : pass },
 =======
@@ -37,6 +42,9 @@ export class AuthProvider {
           url       : any        = URI+ "user.php";
 =======
 >>>>>>> 38d81d38c5f49eaff9a108726f3ca0bbacbcf1bd
+=======
+          options   : any    = { "key" : "create", "name" : name, "password" : pass, "email" : email, "year" : year },
+>>>>>>> parent of 327f06b... zxa
           url       : any        = URI+ "connection.php";
 >>>>>>> 7d188af16ad927642323d36ff747263d0fb03ffc
 
@@ -90,7 +98,7 @@ export class AuthProvider {
 
    sendFailureNotification(message : string)  : void
    {
-      let notification = this.toastCtrl.create({
+      let notification la= this.toastCtrl.create({
           message       : message,
           duration      : 1000,
           position      :'top',
