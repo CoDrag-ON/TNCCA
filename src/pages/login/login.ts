@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
+import { AdminPage } from '../admin/admin';
+import { AuthProvider } from '../../providers/auth/auth';
 
 /**
  * Generated class for the LoginPage page.
@@ -16,7 +18,12 @@ import { TabsPage } from '../tabs/tabs';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  email:string;
+  password:string;
+
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams,
+    private auth:AuthProvider) {
   }
 
   ionViewDidLoad() {
@@ -25,7 +32,15 @@ export class LoginPage {
 
   navLogin()
   {
-    this.navCtrl.setRoot(TabsPage)
+    if(this.email === "admin" && this.password === "admin")
+    {
+      this.navCtrl.setRoot(AdminPage)
+    }
+    else{
+      //this.auth.login(this.email,this.password).subscribe(data=>console.log(data))
+      this.navCtrl.setRoot(TabsPage)
+
+    }
   }
   navSignup()
   {

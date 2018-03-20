@@ -36,8 +36,6 @@ export class HomePage {
     });
   }
 
-  addNews(){
-    this.navCtrl.push(AddNewsPage)
-  }
+
  
 }

@@ -7,13 +7,14 @@ import { ForumPage } from '../forum/forum';
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  tab1Root = 'HomePage';
-
+  tab1Root = 'MinistryPage';
   tab2Root = 'SongsPage';
-  tab3Root = 'AboutPage';
+  tab3Root = 'HomePage';
+  tab4Root = 'AboutPage';
+  
 
   constructor(public navCtrl: NavController) {
-
+    
   }
 
   openChat()

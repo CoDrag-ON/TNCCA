@@ -21,6 +21,11 @@ import { NewsProvider } from '../providers/news/news';
 import { AddNewsPage } from '../pages/add-news/add-news';
 import { ToastProvider } from '../providers/toast/toast';
 import { HttpModule } from '@angular/http';
+import { AdminPage } from '../pages/admin/admin';
+import { HomePage } from '../pages/home/home';
+import { AddSongsPage } from '../pages/add-songs/add-songs';
+import { AllSongsPage } from '../pages/all-songs/all-songs';
+import { AllNewsPage } from '../pages/all-news/all-news';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -38,7 +43,12 @@ export const firebaseConfig = {
     TabsPage,
     LoginPage,
     ForumPage,
-    AddNewsPage
+    AddNewsPage,
+    AddSongsPage,
+    AdminPage,
+    AllSongsPage,
+    AllNewsPage
+    
   ],
   imports: [
     BrowserModule,
@@ -55,7 +65,12 @@ export const firebaseConfig = {
     LoginPage,
     TabsPage,
     ForumPage,
-    AddNewsPage
+    AddNewsPage,
+    AddSongsPage,
+    AdminPage,
+    AllSongsPage,
+    AllNewsPage
+    
   ],
   providers: [
     StatusBar,
