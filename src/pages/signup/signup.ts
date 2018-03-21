@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
+import { LoadingController } from 'ionic-angular';
+
 
 /**
  * Generated class for the SignupPage page.
@@ -37,14 +39,17 @@ export class SignupPage {
   password:string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams ,private auth:AuthProvider) {
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams ,
+     private auth:AuthProvider,
+     public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     
     console.log('ionViewDidLoad SignupPage');
   }
-  signup()
+  SendData()
   {
    
 
@@ -53,9 +58,22 @@ export class SignupPage {
 
 
     
-    this.navCtrl.pop()
     console.log(this.NewUser);
 
+  }
+
+  signup() {
+    let loader = this.loadingCtrl.create({
+      content: "Creating Accoumt",
+      duration: 3000
+    });
+    loader.present();
+
+    setTimeout(()=>{
+      this.SendData()
+      this.navCtrl.pop()
+
+    })
   }
 
 }
