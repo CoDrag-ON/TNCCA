@@ -7,20 +7,43 @@
 <ion-header>
 
   <ion-navbar align="center">
-    துன்மார்க்கருடைய ஆலோசனையில் நடவாமலும், பாவிகளுடைய வழியில் நில்லாமலும்,
+    <p>
+      துன்மார்க்கருடைய ஆலோசனையில் நடவாமலும், பாவிகளுடைய வழியில் நில்லாமலும்
+    </p>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding center text-center>
 
   <ion-grid>
     <ion-row align="center">
       <img src="" alt="">
     </ion-row>
-    <ion-row>
-      Tamil Nadu 
+    <ion-row  align="center">
+      <strong>Tamil Nadu</strong>
+    </ion-row>
+
+    <ion-row class="founder" center align="center">
+       <p>Reg No:144/2016</p> 
+    </ion-row>
+
+    <ion-row  class="founder" align="center">
+      <p><strong align="center">Founder & President</strong></p><br>
+      <p >Mr. Aanandha Geethan</p>
+    </ion-row>
+
+    <ion-row  >
+      <ion-col>
+        <strong >Secretary</strong>
+        <p >S.P sundhar</p>
+      </ion-col>
+
+      <ion-col>
+          <strong >Treasurer</strong>
+          <p align="center">A.Martin Raj</p>
+        </ion-col>
     </ion-row>
   </ion-grid>
 
@@ -35,7 +58,7 @@
         </ion-item>
 
         <button ion-button block small (click)="navLogin()" >Login</button>
-        <button ion-button block small  clear (click)="navSignup()" >Signup</button>
+        <button ion-button block small color="secondary"   (click)="navSignup()" >Signup</button>
 
       
       </ion-list>

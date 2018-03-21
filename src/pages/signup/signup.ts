@@ -53,7 +53,7 @@ export class SignupPage {
 
 
     
-      this.navCtrl.pop()
+    this.navCtrl.pop()
     console.log(this.NewUser);
 
   }

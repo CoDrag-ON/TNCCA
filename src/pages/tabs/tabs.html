@@ -1,13 +1,15 @@
 <ion-header >
 
-  <ion-navbar color="danger">
-    <ion-title>Cyril</ion-title>
+  <ion-navbar color="primary">
+    <ion-title align="center">TNCCA</ion-title>
     
+     
+
       <ion-buttons  start>
-        <button ion-button icon-only (click)="openChat()" color="light">
-          <ion-icon name="md-chatbubbles"></ion-icon>
-        </button>
-      </ion-buttons>
+          <button ion-button icon-only (click)="openAccount()" color="light">
+            <ion-icon name="md-contact"></ion-icon>
+          </button>
+        </ion-buttons>
     
   </ion-navbar>
 
@@ -18,6 +20,6 @@
   <ion-tab [root]="tab2Root" tabTitle="Songs" tabIcon="md-musical-notes"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="Events" tabIcon="md-paper"></ion-tab>
 
-  <ion-tab [root]="tab4Root" tabTitle="About Me" tabIcon="md-contact"></ion-tab>
+  <ion-tab [root]="tab4Root" tabTitle="Message" tabIcon="md-chatbubbles"></ion-tab>
 
 </ion-tabs>

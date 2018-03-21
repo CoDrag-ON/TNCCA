@@ -20,6 +20,7 @@ export class LoginPage {
 
   email:string;
   password:string;
+  UserDetails:any;
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
@@ -37,8 +38,14 @@ export class LoginPage {
       this.navCtrl.setRoot(AdminPage)
     }
     else{
-      this.auth.login(this.email,this.password).subscribe(data=>console.log(data))
-      //this.navCtrl.setRoot(TabsPage)
+      this.auth.login(this.email,this.password).subscribe(data=>{
+        this.UserDetails = data  
+        console.log(this.UserDetails)
+
+        this.navCtrl.setRoot(TabsPage)
+      }
+      )
+      //
 
     }
   }

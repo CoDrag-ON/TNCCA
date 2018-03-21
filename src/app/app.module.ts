@@ -26,6 +26,8 @@ import { HomePage } from '../pages/home/home';
 import { AddSongsPage } from '../pages/add-songs/add-songs';
 import { AllSongsPage } from '../pages/all-songs/all-songs';
 import { AllNewsPage } from '../pages/all-news/all-news';
+import { AboutPage } from '../pages/about/about';
+import { SongsProvider } from '../providers/songs/songs';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -42,12 +44,13 @@ export const firebaseConfig = {
     MyApp,
     TabsPage,
     LoginPage,
-    ForumPage,
     AddNewsPage,
     AddSongsPage,
     AdminPage,
     AllSongsPage,
-    AllNewsPage
+    AllNewsPage,
+    AboutPage,
+    
     
   ],
   imports: [
@@ -64,12 +67,12 @@ export const firebaseConfig = {
     MyApp,
     LoginPage,
     TabsPage,
-    ForumPage,
     AddNewsPage,
     AddSongsPage,
     AdminPage,
     AllSongsPage,
-    AllNewsPage
+    AllNewsPage,
+    AboutPage,
     
   ],
   providers: [
@@ -79,7 +82,8 @@ export const firebaseConfig = {
     MessageProvider,
     AuthProvider,
     NewsProvider,
-    ToastProvider
+    ToastProvider,
+    SongsProvider
   ]
 })
 export class AppModule {}
