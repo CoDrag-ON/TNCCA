@@ -13,9 +13,49 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
+
+  <ion-card>
+    <ion-card-header text-center>
+      Information
+    </ion-card-header>
+
+    <ion-list>
+      <ion-item >
+        {{Name}}
+      </ion-item>
+      <ion-item >
+        {{DOB}}
+      </ion-item>
+      <ion-item >
+        {{Place}}
+      </ion-item>
+      <ion-item >
+        {{City}}
+      </ion-item>
+      <ion-item >
+        {{Parish}}
+      </ion-item>
+      <ion-item >
+        {{Diocese}}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      About
+    </ion-card-header>
+    <ion-card-content>
+      {{About}}
+    </ion-card-content>
+  </ion-card>
+
+  <button padding-left pading-right ion-button small block full (click)="logout()" color="danger" >Logout</button>
+
+
+
 
 </ion-content>
 <ion-footer padding-left padding-right>
-  <button ion-button small block full (click)="logout()" color="danger" >Logout</button>
 </ion-footer>

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
 import { LoadingController } from 'ionic-angular';
+import { ToastProvider } from '../../providers/toast/toast';
 
 
 /**
@@ -22,7 +23,7 @@ export class SignupPage {
 
   NewUser:any;
 
-  Con_Pass:string;
+  ConPass:string;
 
   Name:string;
   DOB:string;
@@ -32,17 +33,18 @@ export class SignupPage {
   Diocese:string;
   TNCCA_zone:string;
   Aadhar_id:number;
-  Role_in_Choir:string;
-  Number:number;
-  Mail_id:string;
-  About_me:string;
-  password:string;
+  Role_in_choir:string;
+  Mobile:number;
+  Email_id:string;
+  About:string;
+  Password:string;
 
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams ,
      private auth:AuthProvider,
-     public loadingCtrl: LoadingController) {
+     public loadingCtrl: LoadingController,
+     public toast:ToastProvider) {
   }
 
   ionViewDidLoad() {
@@ -51,14 +53,24 @@ export class SignupPage {
   }
   SendData()
   {
-   
 
-    this.auth.insertUser(this.Name,this.DOB,this.Place,this.City,this.Parish,this.Diocese,this.TNCCA_zone,this.Aadhar_id,
-      this.Role_in_Choir,this.Number,this.Mail_id,this.About_me,this.password)
-
-
-    
-    console.log(this.NewUser);
+  
+      this.auth.insertUser(
+        this.Name,
+        this.DOB,
+        this.Place,
+        this.City,
+        this.Parish,
+        this.Diocese,
+        this.TNCCA_zone,
+        this.Aadhar_id,
+        this.Role_in_choir,
+        this.Mobile,
+        this.Email_id,
+        this.About,
+        this.Password
+      );
+  
 
   }
 
