@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { File } from '@ionic-native/file';
 
 import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-media';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { ToastProvider } from '../../providers/toast/toast';
 
 /**
  * Generated class for the MinistryPage page.
@@ -19,8 +22,24 @@ import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-m
 })
 export class MinistryPage {
 
-  constructor(private iab: InAppBrowser,public navCtrl: NavController, public navParams: NavParams,private streamingMedia: StreamingMedia) {
+
+
+  constructor(private iab: InAppBrowser,
+    public navCtrl: NavController,
+     public navParams: NavParams,
+     private streamingMedia: StreamingMedia,
+     private transfer: FileTransfer,
+     private file: File,
+    public toast:ToastProvider) 
+    {
+
   }
+
+  fileTransfer: FileTransferObject = this.transfer.create();
+
+
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MinistryPage');
@@ -40,6 +59,18 @@ export class MinistryPage {
  
   stopAudio() {
     this.streamingMedia.stopAudio();
+  }
+
+  download() {
+    
+    const url = 'https://figurable-jack.000webhostapp.com/songs/Kaalam_Yen_Kadhali-StarMusiQ.Com.mp3';
+    this.fileTransfer.download(url, this.file.dataDirectory + 'Music').then((entry) => {
+      console.log('download complete: ' + entry.toURL());
+      this.toast.sendToast("Downloading File")
+    }, (error) => {
+      alert("Server Down");
+      this.toast.sendToast("Failed to download")
+    });
   }
  
 

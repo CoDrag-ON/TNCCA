@@ -36,6 +36,8 @@ import { SongsProvider } from '../providers/songs/songs';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { StreamingMedia } from '@ionic-native/streaming-media';
 import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -98,7 +100,9 @@ export const firebaseConfig = {
     ToastProvider,
     SongsProvider,
     InAppBrowser,
-    StreamingMedia
+    StreamingMedia,
+    FileTransfer,
+    File
   ]
 })
 export class AppModule {}
