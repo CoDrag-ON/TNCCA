@@ -7,16 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>ministry</ion-title>
+    <ion-title></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content >
 
-  <ion-card>
-    <ion-card-header align="center">
+  <ion-card (click)="viewBible()">
+    <ion-card-header color="primary" text-center>
       Daily Bible verse
     </ion-card-header>
     <ion-card-content align="center">
@@ -28,7 +28,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card >
       <ion-card-header align="center">
         Daily Response Song
       </ion-card-header>

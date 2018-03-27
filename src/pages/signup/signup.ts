@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
+import { LoadingController } from 'ionic-angular';
+import { ToastProvider } from '../../providers/toast/toast';
+
 
 /**
  * Generated class for the SignupPage page.
@@ -20,7 +23,7 @@ export class SignupPage {
 
   NewUser:any;
 
-  Con_Pass:string;
+  ConPass:string;
 
   Name:string;
   DOB:string;
@@ -30,32 +33,59 @@ export class SignupPage {
   Diocese:string;
   TNCCA_zone:string;
   Aadhar_id:number;
-  Role_in_Choir:string;
-  Number:number;
-  Mail_id:string;
-  About_me:string;
-  password:string;
+  Role_in_choir:string;
+  Mobile:number;
+  Email_id:string;
+  About:string;
+  Password:string;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams ,private auth:AuthProvider) {
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams ,
+     private auth:AuthProvider,
+     public loadingCtrl: LoadingController,
+     public toast:ToastProvider) {
   }
 
   ionViewDidLoad() {
     
     console.log('ionViewDidLoad SignupPage');
   }
-  signup()
+  SendData()
   {
-   
 
-    this.auth.insertUser(this.Name,this.DOB,this.Place,this.City,this.Parish,this.Diocese,this.TNCCA_zone,this.Aadhar_id,
-      this.Role_in_Choir,this.Number,this.Mail_id,this.About_me,this.password)
+  
+      this.auth.insertUser(
+        this.Name,
+        this.DOB,
+        this.Place,
+        this.City,
+        this.Parish,
+        this.Diocese,
+        this.TNCCA_zone,
+        this.Aadhar_id,
+        this.Role_in_choir,
+        this.Mobile,
+        this.Email_id,
+        this.About,
+        this.Password
+      );
+  
 
+  }
 
-    
-    this.navCtrl.pop()
-    console.log(this.NewUser);
+  signup() {
+    let loader = this.loadingCtrl.create({
+      content: "Creating Accoumt",
+      duration: 3000
+    });
+    loader.present();
 
+    setTimeout(()=>{
+      this.SendData()
+      this.navCtrl.pop()
+
+    })
   }
 
 }

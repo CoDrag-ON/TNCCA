@@ -17,15 +17,15 @@ export class AuthProvider {
 
 
 
-  insertUser(Name,DOB,Place,City,Parish,Diocese,TNCCA_zone,Aadhar_id,Role_in_choir,Mobile,Email_id,About,Password)
+  insertUser(name,dob,place,city,parish,diocese,TNCCA_zone,Aadhar_id,Role_in_choir,Mobile,Email_id,About,Password)
 
   {
   	let URI = "https://figurable-jack.000webhostapp.com/cyril/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
-          options   : any    = { "key" : "create", "name" : Name,
-           "dob" : DOB, "place" : Place, "city" : City,
-        "parish":Parish,"diocese":Diocese,"TNCCA_zone":TNCCA_zone,
+          options   : any    = { "key" : "create", "name" : name,
+           "dob" : name, "place" : place, "city" : city,
+        "parish":parish,"diocese":diocese,"TNCCA_zone":TNCCA_zone,
         "aadhar":Aadhar_id,"role_in_choir":Role_in_choir,
       "mobile":Mobile,"email":Email_id,"about":About,"password":Password},
       
@@ -37,7 +37,7 @@ export class AuthProvider {
       {
          // If the request was successful notify the user
          
-         this.toast.sendToast(`your account has ben created: ${Name}`);
+         this.toast.sendToast(`your account has ben created: ${name}`);
       },
       (error : any) =>
       {

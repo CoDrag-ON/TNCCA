@@ -14,18 +14,25 @@
 
 
 <ion-content >
-  <ul>
-    <li class="mlist" *ngFor="let event of Events" >
-      <ion-card>
-          <ion-card-header>
+
+  <ion-list >
+  
+      <ion-card *ngFor="let event of Events">
+          <ion-card-header color = "primary" text-center>
             {{event?.title}}
           </ion-card-header>
-          <ion-card-content>
+          <ion-card-content text-center>
               {{event?.body}}          
             </ion-card-content>
+         <!-- <ion-buttons end>
+            <button ion-button icon-only clear >
+              <ion-icon name="ios-chatboxes" >
+              </ion-icon>
+
+            </button>
+          </ion-buttons> -->
         </ion-card>
-      </li>
-  </ul>
+  </ion-list>
 
 
 
