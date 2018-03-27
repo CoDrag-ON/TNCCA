@@ -47,7 +47,7 @@ export class MessageProvider {
       {
          // If the request was successful notify the user
          
-         this.toast.sendToast(`your message has ben created: ${name}`);
+         this.toast.sendToast(`your message has ben created: ${message}`);
       },
       (error : any) =>
       {

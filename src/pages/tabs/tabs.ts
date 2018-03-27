@@ -3,6 +3,9 @@ import {  NavController } from 'ionic-angular';
 import { ForumPage } from '../forum/forum';
 import { AboutPage } from '../about/about';
 
+import { Storage } from '@ionic/storage';
+
+
 
 @Component({
   templateUrl: 'tabs.html'
@@ -13,19 +16,18 @@ export class TabsPage {
   tab3Root = 'HomePage';
   tab5Root = 'QuerysPage';
 
-  
+  name:string;
+
 
   
 
-  constructor(public navCtrl: NavController) {
+  
+
+  constructor(public navCtrl: NavController,private storage: Storage) {
+
+    
   }
-  
-
-  openChat()
-  {
-    this.navCtrl.push(ForumPage)
-  }
-
+ 
 
   openAccount()
   {

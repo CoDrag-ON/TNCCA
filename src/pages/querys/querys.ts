@@ -26,6 +26,12 @@ export class QuerysPage {
         this.Discussion = data
         console.log(data);
       }) 
+
+      this.storage.get('name').then((val=>
+        {
+          this.name = val;
+        }
+        ));
   }
 
   ionViewDidLoad() {
@@ -33,15 +39,13 @@ export class QuerysPage {
   }
 
   sendMsg(){
-    this.storage.get('name').then((val=>
-      {
-        this.name = val;
-      }
-      ));
+   
 
       
 
       console.log(this.name,this.msg)
+
+
     this.message.sendQuery(this.name,this.msg);
     setTimeout(()=>this.message.getQuery().subscribe(data=>
       {
