@@ -78,9 +78,14 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-filechooser" spec="^1.0.1" />
+<<<<<<< HEAD
     <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
+=======
+    <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
+>>>>>>> efe681c2b6fbf022dd966f36705a85a5af875d42
     <plugin name="com.hutchind.cordova.plugins.streamingmedia" spec="~0.1.4" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
     <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
 </widget>

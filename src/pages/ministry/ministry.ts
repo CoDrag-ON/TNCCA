@@ -4,9 +4,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { File } from '@ionic-native/file';
 
+<<<<<<< HEAD
 import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-media';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { ToastProvider } from '../../providers/toast/toast';
+=======
+>>>>>>> efe681c2b6fbf022dd966f36705a85a5af875d42
 
 /**
  * Generated class for the MinistryPage page.
@@ -22,6 +25,7 @@ import { ToastProvider } from '../../providers/toast/toast';
 })
 export class MinistryPage {
 
+<<<<<<< HEAD
 
 
   constructor(private iab: InAppBrowser,
@@ -33,6 +37,9 @@ export class MinistryPage {
     public toast:ToastProvider) 
     {
 
+=======
+  constructor(private iab: InAppBrowser,public navCtrl: NavController, public navParams: NavParams) {
+>>>>>>> efe681c2b6fbf022dd966f36705a85a5af875d42
   }
 
   fileTransfer: FileTransferObject = this.transfer.create();
@@ -45,6 +52,7 @@ export class MinistryPage {
     console.log('ionViewDidLoad MinistryPage');
   }
 
+<<<<<<< HEAD
   startAudio() {
     console.log("clicked...!")
     let options: StreamingAudioOptions = {
@@ -73,6 +81,9 @@ export class MinistryPage {
     });
   }
  
+=======
+
+>>>>>>> efe681c2b6fbf022dd966f36705a85a5af875d42
 
   viewBible() 
   {

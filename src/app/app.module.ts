@@ -34,7 +34,7 @@ import { AllNewsPage } from '../pages/all-news/all-news';
 import { AboutPage } from '../pages/about/about';
 import { SongsProvider } from '../providers/songs/songs';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { StreamingMedia } from '@ionic-native/streaming-media';
+
 import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
@@ -100,9 +100,13 @@ export const firebaseConfig = {
     ToastProvider,
     SongsProvider,
     InAppBrowser,
+<<<<<<< HEAD
     StreamingMedia,
     FileTransfer,
     File
+=======
+  
+>>>>>>> efe681c2b6fbf022dd966f36705a85a5af875d42
   ]
 })
 export class AppModule {}
