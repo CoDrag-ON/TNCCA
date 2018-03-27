@@ -22,6 +22,8 @@ import { ToastProvider } from '../../providers/toast/toast';
 })
 export class LoginPage {
 
+  HAS_LOGGED_IN:boolean = false;
+
   email:string;
   password:string;
   UserDetails:any;
@@ -56,6 +58,7 @@ export class LoginPage {
         this.storage.set('mobile', this.UserDetails.mobile);
         this.storage.set('email', this.UserDetails.email);
         this.storage.set('about', this.UserDetails.about);
+        this.storage.set('HAS_LOGGED_IN',true);
         
 
 

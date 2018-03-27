@@ -11,7 +11,6 @@ export class TabsPage {
   tab1Root = 'MinistryPage';
   tab2Root = 'SongsPage';
   tab3Root = 'HomePage';
-  tab4Root = 'ForumPage';
   
 
   constructor(public navCtrl: NavController) {

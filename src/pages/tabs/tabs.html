@@ -2,10 +2,7 @@
 
   <ion-navbar color="primary">
     <ion-title align="center">TNCCA</ion-title>
-    
-     
-
-      <ion-buttons  start>
+      <ion-buttons  end>
           <button ion-button icon-only (click)="openAccount()" color="light">
             <ion-icon name="md-contact"></ion-icon>
           </button>
@@ -20,6 +17,5 @@
   <ion-tab [root]="tab2Root" tabTitle="Songs" tabIcon="md-musical-notes"></ion-tab>
   <ion-tab [root]="tab3Root" tabTitle="Events" tabIcon="md-paper"></ion-tab>
 
-  <ion-tab [root]="tab4Root" tabTitle="Message" tabIcon="md-chatbubbles"></ion-tab>
 
 </ion-tabs>

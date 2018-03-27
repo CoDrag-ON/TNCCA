@@ -6,14 +6,14 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>About</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content >
+<ion-content  padding-left pading-right>
 
   <ion-card>
     <ion-card-header text-center>
@@ -46,12 +46,25 @@
     <ion-card-header>
       About
     </ion-card-header>
-    <ion-card-content>
-      {{About}}
-    </ion-card-content>
+    
+      <ion-list>
+        <ion-item>
+            {{About}}
+        </ion-item>
+      </ion-list>
+      
+    
   </ion-card>
 
-  <button padding-left pading-right ion-button small block full (click)="logout()" color="danger" >Logout</button>
+  <div >
+      <button round  ion-button  block clear  (click)="abtUs()" color="primary" >About Us</button>
+
+  </div>
+  <div >
+      <button round  ion-button  block  (click)="logout()" color="danger" >Logout</button>
+
+  </div>
+
 
 
 

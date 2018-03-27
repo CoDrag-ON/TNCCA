@@ -7,10 +7,8 @@
 <ion-header>
 
   <ion-navbar color="primary" align="center">
-    <p style="color:white">
-      துன்மார்க்கருடைய ஆலோசனையில் நடவாமலும், பாவிகளுடைய வழியில் நில்லாமலும்
-    </p>
-  </ion-navbar>
+    <ion-title>TNCCA</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
@@ -19,49 +17,28 @@
 
  
 
-  <div text-center>
-    <strong>TNCCA</strong>
-  </div>
-  <div text-center>
-      Reg No:144/2016
-  </div>
-
-  <br>
-
-  <div text-center>
-      <strong >Founder & President</strong> <br>
-      <p>Mr. Aanandha Geethan</p>
-  </div>
-
-  
-  <ion-row  >
-      <ion-col>
-        <strong >Secretary</strong>
-        <p >S.P sundhar</p>
-      </ion-col>
-
-      <ion-col text-right>
-          <strong >Treasurer</strong>
-          <p >A.Martin Raj</p>
-        </ion-col>
-  </ion-row>
-
   
 
 
     <ion-list padding>
 
-        <ion-item>
-          <ion-input [(ngModel)]="email" type="text" placeholder="Username"></ion-input>
+        <ion-item inset >
+            <ion-label floating>Email</ion-label>
+          <ion-input [(ngModel)]="email" type="text" ></ion-input>
         </ion-item>
       
         <ion-item>
-          <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+            <ion-label floating>Password</ion-label>
+            <ion-input [(ngModel)]="password" type="password" ></ion-input>
         </ion-item>
 
-        <button ion-button block small (click)="navLogin()" >Login</button>
-        <button ion-button block small color="secondary"   (click)="navSignup()" >Signup</button>
+        <div padding-top>
+            <button ion-button block round  (click)="navLogin()" >Login</button>
 
+        </div>
+        <div padding-top>
+          <button ion-button block  round color="secondary"   (click)="navSignup()" >Signup</button>
+        </div>
       
       </ion-list>
 
