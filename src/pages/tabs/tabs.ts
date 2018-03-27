@@ -3,7 +3,6 @@ import {  NavController } from 'ionic-angular';
 import { ForumPage } from '../forum/forum';
 import { AboutPage } from '../about/about';
 
-import { Storage } from '@ionic/storage';
 
 
 
@@ -14,16 +13,15 @@ export class TabsPage {
   tab1Root = 'MinistryPage';
   tab2Root = 'SongsPage';
   tab3Root = 'HomePage';
-  tab5Root = 'QuerysPage';
-
-  name:string;
+  tab4Root = 'QuerysPage';
 
 
-  
 
   
 
-  constructor(public navCtrl: NavController,private storage: Storage) {
+  
+
+  constructor(public navCtrl: NavController) {
 
     
   }
