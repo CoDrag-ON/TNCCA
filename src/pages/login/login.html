@@ -6,67 +6,40 @@
 -->
 <ion-header>
 
-  <ion-navbar align="center">
-    <p>
-      துன்மார்க்கருடைய ஆலோசனையில் நடவாமலும், பாவிகளுடைய வழியில் நில்லாமலும்
-    </p>
-  </ion-navbar>
+  <ion-navbar color="primary" align="center">
+    <ion-title>TNCCA</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding center text-center>
+<ion-content  >
 
-  <ion-grid>
-    <ion-row align="center">
-      <img src="" alt="">
-    </ion-row>
-    <ion-row  align="center">
-      <strong>Tamil Nadu</strong>
-    </ion-row>
+ 
 
-    <ion-row class="founder" center align="center">
-       <p>Reg No:144/2016</p> 
-    </ion-row>
+  
 
-    <ion-row  class="founder" align="center">
-      <p><strong align="center">Founder & President</strong></p><br>
-      <p >Mr. Aanandha Geethan</p>
-    </ion-row>
 
-    <ion-row  >
-      <ion-col>
-        <strong >Secretary</strong>
-        <p >S.P sundhar</p>
-      </ion-col>
+    <ion-list padding>
 
-      <ion-col>
-          <strong >Treasurer</strong>
-          <p align="center">A.Martin Raj</p>
-        </ion-col>
-    </ion-row>
-  </ion-grid>
-
-    <ion-list inset> 
-
-        <ion-item>
-          <ion-input [(ngModel)]="email" type="text" placeholder="Username"></ion-input>
+        <ion-item inset >
+            <ion-label floating>Email</ion-label>
+          <ion-input [(ngModel)]="email" type="text" ></ion-input>
         </ion-item>
       
         <ion-item>
-          <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+            <ion-label floating>Password</ion-label>
+            <ion-input [(ngModel)]="password" type="password" ></ion-input>
         </ion-item>
 
-        <button ion-button block (click)="navLogin()" >Login</button>
-        <ion-grid>
-          <ion-row>
-            <ion-col col-2>
-              <button ion-botton clear small color="primary" >forgetpassword..?</button>
-            </ion-col>
-            <ion-col col-12>
-              <button ion-button clear small color="secondary"   (click)="navSignup()" >Signup</button>
-            </ion-col>
-          </ion-row>       
-        </ion-grid>
+        <div padding-top>
+            <button ion-button block  (click)="navLogin()" >Login</button>
+
+        </div>
+        <div padding-top>
+          <button ion-button block color="secondary"   (click)="navSignup()" >Signup</button>
+        </div>
+      
+
       </ion-list>
 </ion-content>

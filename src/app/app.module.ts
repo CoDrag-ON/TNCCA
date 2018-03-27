@@ -34,7 +34,7 @@ import { AllNewsPage } from '../pages/all-news/all-news';
 import { AboutPage } from '../pages/about/about';
 import { SongsProvider } from '../providers/songs/songs';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { StreamingMedia } from '@ionic-native/streaming-media';
+
 import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
 
 // AF2 Settings
@@ -98,7 +98,7 @@ export const firebaseConfig = {
     ToastProvider,
     SongsProvider,
     InAppBrowser,
-    StreamingMedia
+  
   ]
 })
 export class AppModule {}
