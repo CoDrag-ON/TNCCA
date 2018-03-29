@@ -17,7 +17,7 @@
 
    
   <p>{{imageURI}}</p>
-    <img src="{{imageURI}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
+    <img src="{{imageURI}}" *ngIf="imageURI" alt="Ionic File" width="300" />
   <button ion-button (click)="getImage()" >Take Picture</button>
   <button ion-button (click)="uploadFile() " >Upload Picture</button>
 

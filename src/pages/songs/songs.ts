@@ -36,7 +36,7 @@ export class SongsPage {
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.FILE_URI,
-      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+      sourceType: this.camera.PictureSourceType.CAMERA
     }
 
     this.camera.getPicture(options).then((imageData) => {
@@ -56,13 +56,15 @@ export class SongsPage {
 
       let options: FileUploadOptions = {
         fileKey: 'ionicfile',
-        fileName: 'ionicfile.png',
+        fileName: 'ionicfile',
         chunkedMode: false,
+        mimeType: "image/jpeg",
         headers: {}
       }
 
-    fileTransfer.upload(this.imageURI,'https://figurable-jack.000webhostapp.com/cyril')
+    fileTransfer.upload(this.imageURI,'https://figurable-jack.000webhostapp.com/cyril/',options)
       .then((data) => {
+      this.imageFileName = "https://figurable-jack.000webhostapp.com/cyril/ionicfile.jpg"
       loader.dismiss();
       this.presentToast("Image uploaded successfully");
     }, (err) => {
