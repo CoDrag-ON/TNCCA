@@ -38,6 +38,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
+import { ModelProvider } from '../providers/model/model';
+import { ModelPage } from '../pages/model/model';
+import { EventCommentProvider } from '../providers/event-comment/event-comment';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -60,7 +63,8 @@ export const firebaseConfig = {
     AllSongsPage,
     AllNewsPage,
     AboutPage,
-    AboutTnccaPage
+    AboutTnccaPage,
+    ModelPage
     
     
   ],
@@ -87,7 +91,8 @@ export const firebaseConfig = {
     AllSongsPage,
     AllNewsPage,
     AboutPage,
-    AboutTnccaPage
+    AboutTnccaPage,
+    ModelPage
     
   ],
   providers: [
@@ -101,7 +106,9 @@ export const firebaseConfig = {
     SongsProvider,
     InAppBrowser,
     FileTransfer,
-    File
+    File,
+    ModelProvider,
+    EventCommentProvider
   ]
 })
 export class AppModule {}

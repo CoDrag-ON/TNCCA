@@ -57,7 +57,7 @@ export class AuthProvider {
     let URI = "https://figurable-jack.000webhostapp.com/cyril/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
-          options   : any    = { "key" : "login", "email" : email, "password": password },
+        options   : any    = { "key" : "login", "email" : email, "password": password },
       
           url       : any        = URI+ "user.php";
 

@@ -54,6 +54,20 @@ export class NewsProvider {
     let params = new HttpParams();
     
     console.log(URI);
-    return this.http.get(URI,{params:params}).map((res) => res.json());  }
+    return this.http.get(URI,{params:params}).map((res) => res.json()); 
+   }
+
+   getNew(id)
+   {
+    let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+
+    let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+        options   : any    = { "key" : "select", "id" : id},
+      
+          url       : any        = URI+ "news.php";
+
+     return this.http.post(url, JSON.stringify(options), headers)
+      
+   }
 
 }

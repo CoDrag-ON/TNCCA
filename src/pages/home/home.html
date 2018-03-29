@@ -24,13 +24,13 @@
           <ion-card-content text-center>
               {{event?.body}}          
             </ion-card-content>
-         <!-- <ion-buttons end>
+         <ion-buttons (click)="showComents(event?.id)" end>
             <button ion-button icon-only clear >
               <ion-icon name="ios-chatboxes" >
               </ion-icon>
 
             </button>
-          </ion-buttons> -->
+          </ion-buttons>
         </ion-card>
   </ion-list>
 

@@ -34,18 +34,14 @@
 </ion-content>
 <ion-footer>
   <ion-row>
-    <ion-col col=10>
+   
         <ion-input type="text" [(ngModel)]="msg" placeholder="Enter your Query"></ion-input>
-
-    </ion-col>
-    <ion-col col=2>
-        <ion-fab  bottom right >
-            <button icon-only (click)="sendMsg()" ion-fab>
-              <ion-icon name="md-send"></ion-icon>
-            </button>
+        <button    round icon-only (click)="sendMsg()" >
+          <ion-icon  color="primary" name="md-send"></ion-icon>
+        </button>
             
-          </ion-fab>
-    </ion-col>
+         
+    
   </ion-row>
 
     
