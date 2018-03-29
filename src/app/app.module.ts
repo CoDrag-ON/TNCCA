@@ -41,6 +41,8 @@ import { File } from '@ionic-native/file';
 import { ModelProvider } from '../providers/model/model';
 import { ModelPage } from '../pages/model/model';
 import { EventCommentProvider } from '../providers/event-comment/event-comment';
+import { UserProvider } from '../providers/user/user';
+import { Camera } from '@ionic-native/camera';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -108,7 +110,9 @@ export const firebaseConfig = {
     FileTransfer,
     File,
     ModelProvider,
-    EventCommentProvider
+    EventCommentProvider,
+    UserProvider,
+    Camera
   ]
 })
 export class AppModule {}

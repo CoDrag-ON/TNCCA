@@ -30,7 +30,6 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
     this.news.getNews().subscribe((data)=>
     {
       this.Events = data

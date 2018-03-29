@@ -26,8 +26,8 @@
     </ion-card-header>
    
       <ion-list>
-        <ion-item>
-          
+        <ion-item *ngFor="let cmd of Comments">
+          {{cmd.comment}}
         </ion-item>
       </ion-list>
     
@@ -41,7 +41,7 @@
     <ion-row>
    
         <ion-input type="text" [(ngModel)]="msg" placeholder="Enter your Comments"></ion-input>
-        <button    round icon-only (click)="sendMsg()" >
+        <button    round icon-only (click)="sendCmt()" >
           <ion-icon  color="primary" name="md-send"></ion-icon>
         </button>
             

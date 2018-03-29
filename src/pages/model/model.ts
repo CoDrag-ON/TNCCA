@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, LoadingController } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
+import { EventCommentProvider } from '../../providers/event-comment/event-comment';
+import { UserProvider } from '../../providers/user/user';
 
-
+import { Storage } from '@ionic/storage';
 @IonicPage()
 @Component({
   selector: 'page-model',
@@ -12,14 +14,27 @@ export class ModelPage {
   data:number;
 
   msg:string;
+  u_id:string;
+
+
+  Comments:any;
 
   eventDetail:any
 
   constructor( public navParams: NavParams,
   private view:ViewController,
   private news:NewsProvider,
-  private loadingCtrl:LoadingController
+  private loadingCtrl:LoadingController,
+  private eventCmt:EventCommentProvider,
+  private user:UserProvider,
+  private storage:Storage
   ) {
+
+    this.storage.get('name').then((val)=>
+    {
+      this.u_id = val;
+    });
+    console.log(this.u_id)
 
     this.presentLoadingDefault()
 
@@ -31,6 +46,13 @@ export class ModelPage {
       this.eventDetail = this.eventDetail._body
       this.eventDetail = JSON.parse(this.eventDetail)
       console.log(this.eventDetail)
+    })
+
+    this.eventCmt.getComment(this.data).subscribe((data)=>
+    {
+      this.Comments = data
+      this.Comments = this.Comments
+      console.log(this.Comments)
     })
   }
 
@@ -50,8 +72,20 @@ export class ModelPage {
     this.view.dismiss();
   }
 
-  ionViewWillLoad() {
+
+
+  sendCmt(){
+
     
+    this.eventCmt.insertComment(this.data,this.u_id,this.msg);
+
+    this.eventCmt.getComment(this.data).subscribe((data)=>
+    {
+      this.Comments = data
+      this.Comments = this.Comments
+      console.log(this.Comments)
+    })
+    this.msg = ""
   }
 
 }
