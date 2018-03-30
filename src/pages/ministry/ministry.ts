@@ -21,7 +21,6 @@ export class MinistryPage {
   constructor(private iab: InAppBrowser,public navCtrl: NavController, public navParams: NavParams) {
   }
 
-<<<<<<< HEAD
   navToMessage(){
     this.navCtrl.push(TodayMessagePage)
   }
@@ -29,8 +28,6 @@ export class MinistryPage {
 
 
 
-=======
->>>>>>> 3eea2e95bb4079e43cf4d553216757e6a0f954d1
   ionViewDidLoad() {
     console.log('ionViewDidLoad MinistryPage');
   }
