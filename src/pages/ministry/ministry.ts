@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
@@ -30,6 +29,9 @@ export class MinistryPage {
   viewBible() 
   {
     this.iab.create('https://ionicframework.com/','_self');
+    const browser = this.iab.create('https://ionicframework.com/');
+    browser.insertCSS({ code: "head{color: red;" }); 
   }
+  c
 
 }
