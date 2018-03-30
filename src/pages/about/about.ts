@@ -6,12 +6,7 @@ import { Storage } from '@ionic/storage';
 import { AboutTnccaPage } from '../about-tncca/about-tncca';
 
 
-/**
- * Generated class for the AboutPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({

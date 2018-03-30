@@ -1,0 +1,48 @@
+<!--
+  Generated template for the QuerysPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>querys</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+    <ion-list >
+  
+        <ion-card *ngFor="let dis of Discussion">
+            <ion-card-header color = "primary" text-center>
+              {{dis?.uid}}
+            </ion-card-header>
+            <ion-card-content text-center>
+                {{dis?.message}}          
+            </ion-card-content>
+           
+          </ion-card>
+    </ion-list> 
+
+
+</ion-content>
+<ion-footer>
+  <ion-row>
+   
+        <ion-input type="text" [(ngModel)]="msg" placeholder="Enter your Query"></ion-input>
+        <button    round icon-only (click)="sendMsg()" >
+          <ion-icon  color="primary" name="md-send"></ion-icon>
+        </button>
+            
+         
+    
+  </ion-row>
+
+    
+</ion-footer>

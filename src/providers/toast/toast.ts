@@ -21,8 +21,8 @@ export class ToastProvider {
   {
      let notification = this.toastCtrl.create({
          message       : message,
-         duration      : 1000,
-         position      :'top',
+         duration      : 3000,
+         position      :'bottom',
          dismissOnPageChange: false,
          cssClass: "sucess_notification",
      });
