@@ -43,6 +43,7 @@ import { ModelPage } from '../pages/model/model';
 import { EventCommentProvider } from '../providers/event-comment/event-comment';
 import { UserProvider } from '../providers/user/user';
 import { Camera } from '@ionic-native/camera';
+import { TodayMessagePage } from '../pages/today-message/today-message';
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -66,7 +67,8 @@ export const firebaseConfig = {
     AllNewsPage,
     AboutPage,
     AboutTnccaPage,
-    ModelPage
+    ModelPage,
+    TodayMessagePage
     
     
   ],
@@ -94,7 +96,8 @@ export const firebaseConfig = {
     AllNewsPage,
     AboutPage,
     AboutTnccaPage,
-    ModelPage
+    ModelPage,
+    TodayMessagePage
     
   ],
   providers: [
