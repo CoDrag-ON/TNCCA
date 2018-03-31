@@ -35,7 +35,6 @@ import { AboutPage } from '../pages/about/about';
 import { SongsProvider } from '../providers/songs/songs';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
-import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { ModelProvider } from '../providers/model/model';
@@ -66,7 +65,6 @@ export const firebaseConfig = {
     AllSongsPage,
     AllNewsPage,
     AboutPage,
-    AboutTnccaPage,
     ModelPage,
     TodayMessagePage
     
@@ -95,7 +93,6 @@ export const firebaseConfig = {
     AllSongsPage,
     AllNewsPage,
     AboutPage,
-    AboutTnccaPage,
     ModelPage,
     TodayMessagePage
     

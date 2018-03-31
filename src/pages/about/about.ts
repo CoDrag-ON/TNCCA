@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 
 import { Storage } from '@ionic/storage';
-import { AboutTnccaPage } from '../about-tncca/about-tncca';
 
 
 
@@ -120,7 +119,7 @@ export class AboutPage {
 
   abtUs()
   {
-    this.navCtrl.push(AboutTnccaPage);
+    //this.navCtrl.push(AboutTnccaPage);
   }
 
 }
