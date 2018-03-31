@@ -14,6 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'about-tncca.html',
 })
 export class AboutTnccaPage {
+ 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -21,5 +22,7 @@ export class AboutTnccaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AboutTnccaPage');
   }
+
+ 
 
 }

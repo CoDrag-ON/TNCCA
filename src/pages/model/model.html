@@ -24,14 +24,19 @@
     <ion-card-header>
         {{eventDetail?.body}}
     </ion-card-header>
-   
-      <ion-list>
-        <ion-item *ngFor="let cmd of Comments">
-          {{cmd.comment}}
-        </ion-item>
-      </ion-list>
+    <ion-card padding *ngFor="let cmd of Comments">
+        <ion-card-header>
+            {{cmd.u_id}}
+        </ion-card-header>
+        <ion-card-content>
+            {{cmd.comment}}
+        </ion-card-content>
+      </ion-card>
+     
+      
     
   </ion-card>
+  
 
  
 

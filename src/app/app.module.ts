@@ -115,7 +115,7 @@ export const firebaseConfig = {
     ModelProvider,
     EventCommentProvider,
     UserProvider,
-    Camera
+    Camera,
   ]
 })
 export class AppModule {}

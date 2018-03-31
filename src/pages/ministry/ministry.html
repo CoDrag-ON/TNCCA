@@ -6,9 +6,11 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title></ion-title>
-  </ion-navbar>
+    <ion-buttons  end>
+        <button ion-button icon-only (click)="openAccount()" color="light">
+          <ion-icon name="md-contact"></ion-icon>
+        </button>
+      </ion-buttons>
 
 </ion-header>
 
@@ -26,7 +28,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card  >
+  <!-- <ion-card  >
       <ion-card-header align="center">
         Daily Response Song
       </ion-card-header>
@@ -69,6 +71,6 @@
             </h6>
           </ion-card-content>
         </ion-card>
-  
+      -->
 
 </ion-content>
