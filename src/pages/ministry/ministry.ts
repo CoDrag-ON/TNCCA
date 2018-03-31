@@ -36,8 +36,8 @@ export class MinistryPage {
 
   viewBible() 
   {
-    this.iab.create('https://ionicframework.com/','_self');
-    const browser = this.iab.create('https://ionicframework.com/');
+ 
+    const browser = this.iab.create('http://www.arulvakku.com/index.html');
     browser.insertCSS({ code: "head{color: red;" }); 
   }
   c
