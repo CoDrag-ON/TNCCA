@@ -11,7 +11,7 @@
   </ion-navbar>
   <ion-navbar >
       <ion-title align="center" >
-        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" placeholder="{{myDate.date}}/{{myDate.month}}/{{myDate.year}}">
+        <ion-datetime (ionChange)="dateChange()" displayFormat="MM-DD-YYYY" [(ngModel)]="myDate" placeholder="{{todayDate.getDay()}} - {{todayDate.getMonth()}} - {{todayDate.getFullYear()}}">
           
         </ion-datetime>
       </ion-title>
@@ -21,5 +21,14 @@
 
 
 <ion-content padding>
+
+  <ion-card>
+    <ion-card-header>
+      Message Title
+    </ion-card-header>
+    <ion-card-content>
+      Body
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
