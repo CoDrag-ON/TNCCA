@@ -45,13 +45,9 @@ export class TodayMessagePage {
     }
   }
 
-  dateChange(){
-    console.log(this.myDate)
-  }
-
 }
 
- interface IDate{
+ class IDate{
   date:number;
   month:number;
   year:number;
