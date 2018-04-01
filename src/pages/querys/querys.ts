@@ -39,13 +39,8 @@ export class QuerysPage {
   }
 
   sendMsg(){
-   
 
-      
-
-      console.log(this.name,this.msg)
-
-
+    console.log(this.name,this.msg)
     this.message.sendQuery(this.name,this.msg);
     setTimeout(()=>this.message.getQuery().subscribe(data=>
       {
@@ -53,9 +48,9 @@ export class QuerysPage {
         this.msg = "";
       })
       ,500)
-
-    
-    
+  }
+  showComents(id){
+    console.log(id);
   }
 
 }

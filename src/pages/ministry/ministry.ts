@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { TodayMessagePage } from '../today-message/today-message';
 
+import { AboutPage } from '../about/about';
+
+
 
 /**
  * Generated class for the MinistryPage page.
@@ -32,12 +35,18 @@ export class MinistryPage {
     console.log('ionViewDidLoad MinistryPage');
   }
 
+  
+  openAccount()
+  {
+    this.navCtrl.push(AboutPage)
+  }
+
 
 
   viewBible() 
   {
-    this.iab.create('https://ionicframework.com/','_self');
-    const browser = this.iab.create('https://ionicframework.com/');
+ 
+    const browser = this.iab.create('http://www.arulvakku.com/index.html');
     browser.insertCSS({ code: "head{color: red;" }); 
   }
   c
