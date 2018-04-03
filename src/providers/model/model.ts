@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { ModalController, NavParams } from 'ionic-angular';
 import { ModelPage } from '../../pages/model/model';
+import { MessageModelPage } from '../../pages/message-model/message-model';
 
 
 @Injectable()
@@ -19,6 +20,15 @@ export class ModelProvider {
       ID:id
     });
     profileModal.present();
+  }
+
+  presentMessageModel(id,u_id)
+  {
+    let MessageModel = this.modalCtrl.create(MessageModelPage,{
+      ID:id,
+      u_id:u_id
+    });
+    MessageModel.present();
   }
 
 }

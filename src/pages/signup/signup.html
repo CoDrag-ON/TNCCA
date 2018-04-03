@@ -17,7 +17,7 @@
         </ion-item>
         
         <ion-item>
-        <ion-datetime [(ngModel)]="DOB"  dispalyFormat="dd/mm/yyyy" pickerFormat="DD MM YYYY" placeholder="Date of Birth" ></ion-datetime>
+        <ion-datetime [(ngModel)]="DOB"  dispalyFormat="dd/mm/yyyy" pickerFormat="DD/MM/YYYY" placeholder="Date of Birth" ></ion-datetime>
         </ion-item>
         <ion-item>
           <ion-input [(ngModel)]="Place"  type="text" placeholder="Place" ></ion-input>
@@ -32,7 +32,30 @@
           <ion-input [(ngModel)]="Diocese"  type="text" placeholder="Diocese" ></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input [(ngModel)]="TNCCA_zone"   type="text" placeholder="TNCCA zone" ></ion-input>
+          <ion-label>TNCCA zone</ion-label>
+          <ion-select [(ngModel)]="TNCCA_zone"  >
+            <ion-option>TN-CH-01</ion-option>
+            <ion-option>TN-CB-02</ion-option>
+            <ion-option>TN-DP-03</ion-option>
+            <ion-option>TN-DG-04</ion-option>
+            <ion-option>TN-KR-05</ion-option>
+            <ion-option>TN-KK-06</ion-option>
+            <ion-option>TN-KT-07</ion-option>
+            <ion-option>TN-MM-08</ion-option>
+            <ion-option>TN-MD-09</ion-option>
+            <ion-option>TN-MR-10</ion-option>
+            <ion-option>TN-OT-11</ion-option>
+            <ion-option>TN-PK-12</ion-option>
+            <ion-option>TN-SL-1</ion-option>
+            <ion-option>TN-SG-14</ion-option>
+            <ion-option>TN-TJ-15</ion-option>
+            <ion-option>TN-TK-16</ion-option>
+            <ion-option>TN-TP-17</ion-option>
+            <ion-option>TN-TC-18</ion-option>
+            <ion-option>TN-VL-19</ion-option>
+            <ion-option>DD-PO-20</ion-option>
+           
+          </ion-select>
         </ion-item>
         <ion-item>
           <ion-input [(ngModel)]="Aadhar_id"  type="number" placeholder="Aadhar ID" ></ion-input>

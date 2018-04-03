@@ -43,6 +43,12 @@ import { EventCommentProvider } from '../providers/event-comment/event-comment';
 import { UserProvider } from '../providers/user/user';
 import { Camera } from '@ionic-native/camera';
 import { TodayMessagePage } from '../pages/today-message/today-message';
+import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
+
+import { CallNumber } from '@ionic-native/call-number';
+import { MessageModelPage } from '../pages/message-model/message-model';
+import { StreamingMedia } from '@ionic-native/streaming-media';
+
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -66,7 +72,9 @@ export const firebaseConfig = {
     AllNewsPage,
     AboutPage,
     ModelPage,
-    TodayMessagePage
+    TodayMessagePage,
+    AboutTnccaPage,
+    MessageModelPage
     
     
   ],
@@ -94,7 +102,9 @@ export const firebaseConfig = {
     AllNewsPage,
     AboutPage,
     ModelPage,
-    TodayMessagePage
+    TodayMessagePage,
+    AboutTnccaPage,
+    MessageModelPage
     
   ],
   providers: [
@@ -113,6 +123,8 @@ export const firebaseConfig = {
     EventCommentProvider,
     UserProvider,
     Camera,
+    CallNumber,
+    StreamingMedia
   ]
 })
 export class AppModule {}

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams ,LoadingController, ToastController } from 'ionic-angular';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-import { Camera, CameraOptions } from '@ionic-native/camera';
+
+import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-media';
+
 
 /**
  * Generated class for the SongsPage page.
@@ -16,70 +17,30 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'songs.html',
 })
 export class SongsPage {
-
-  imageURI:any;
-  imageFileName:any;
-
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
-     private transfer: FileTransfer,
-     private camera: Camera,
-     public loadingCtrl: LoadingController,
-     public toastCtrl: ToastController) {
+     private streamingMedia: StreamingMedia
+    ) {
+      
+     
+    
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SongsPage');
+  play()
+  {
+    let options: StreamingAudioOptions = {
+      successCallback: () => { console.log('Video played') },
+      errorCallback: (e) => { console.log('Error streaming') },
+      initFullscreen: false,
+      
+    };
+    this.streamingMedia.playAudio('http://endln.com/TNCCA/songs/Kadhal_Kappal-StarMusiQ.Com.mp3', options);
+
   }
 
-  getImage() {
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.FILE_URI,
-      sourceType: this.camera.PictureSourceType.CAMERA
-    }
 
-    this.camera.getPicture(options).then((imageData) => {
-      this.imageURI = imageData;
-    }, (err) => {
-      console.log(err);
-      this.presentToast(err);
-    });
-  }
+  
+  
 
-  uploadFile() {
-    let loader = this.loadingCtrl.create({
-      content: "Uploading..."
-    });
-    loader.present();
-    const fileTransfer: FileTransferObject = this.transfer.create();
-
-      let options: FileUploadOptions = {
-        fileKey: 'ionicfile',
-        fileName: 'ionicfile',
-        chunkedMode: false,
-        mimeType: "image/jpeg",
-        headers: {}
-      }
-
-    fileTransfer.upload(this.imageURI,'https://figurable-jack.000webhostapp.com/cyril/',options)
-      .then((data) => {
-      this.imageFileName = "https://figurable-jack.000webhostapp.com/cyril/ionicfile.jpg"
-      loader.dismiss();
-      this.presentToast("Image uploaded successfully");
-    }, (err) => {
-      loader.dismiss();
-      this.presentToast("Image uploaded failed");
-    });
-  }
-
-  presentToast(msg) {
-    let toast = this.toastCtrl.create({
-      message: msg,
-      duration: 2000,
-      position: 'bottom'
-    });
-    toast.present();
-  }
-
+ 
 }
