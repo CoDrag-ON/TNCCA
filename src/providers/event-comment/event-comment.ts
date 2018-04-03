@@ -19,7 +19,7 @@ export class EventCommentProvider {
   insertComment(e_id,u_id,comment)
 
   {
-  	let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+  	let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
           options   : any    = { "key" : "create", "e_id" : e_id,
@@ -44,7 +44,7 @@ export class EventCommentProvider {
 
   getComment(e_id)
   {
-    let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+    let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
           options   : any    = { "key" : "select", "e_id" : e_id,

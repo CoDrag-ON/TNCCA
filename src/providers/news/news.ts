@@ -26,7 +26,7 @@ export class NewsProvider {
 
   insertEvent(title,body)
   {
-  	let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+  	let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
           options   : any    = { "key" : "create", "title" : title,"body" : body},
@@ -50,7 +50,7 @@ export class NewsProvider {
 
   getNews()
   {
-    let URI = "https://figurable-jack.000webhostapp.com/cyril/news_get.php";
+    let URI = "http://endln.com/TNCCA/news_get.php";
     let params = new HttpParams();
     
     console.log(URI);
@@ -59,7 +59,7 @@ export class NewsProvider {
 
    getNew(id)
    {
-    let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+    let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
         options   : any    = { "key" : "select", "id" : id},

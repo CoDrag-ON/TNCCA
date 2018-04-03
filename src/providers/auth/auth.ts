@@ -20,7 +20,7 @@ export class AuthProvider {
   insertUser(name,dob,place,city,parish,diocese,TNCCA_zone,Aadhar_id,Role_in_choir,Mobile,Email_id,About,Password)
 
   {
-  	let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+  	let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
           options   : any    = { "key" : "create", "name" : name,
@@ -49,12 +49,12 @@ export class AuthProvider {
 
   getAllUser()
   {
-    return this.http.get("https://figurable-jack.000webhostapp.com/cyril/get_all_user.php")
+    return this.http.get("http://endln.com/TNCCA/get_all_user.php")
   }
 
   login(email,password)
   {
-    let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+    let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
         options   : any    = { "key" : "login", "email" : email, "password": password },

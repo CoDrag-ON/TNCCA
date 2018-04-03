@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, } from '@angular/common/http';
 
 
-import { AngularFireDatabase} from 'angularfire2/database';
 import { ToastProvider } from '../toast/toast';
 
 /*
@@ -15,25 +14,17 @@ import { ToastProvider } from '../toast/toast';
 @Injectable()
 export class MessageProvider {
 
-  constructor(public http: HttpClient,private  afDb: AngularFireDatabase,
+  constructor(public http: HttpClient,
   public toast:ToastProvider) {
     
   }
 
-  getMessage()
-  {
-    return this.afDb.list('messages').valueChanges();
-  }
 
-  sendMsg(name,msg)
-  {
-    this.afDb.list('messages').push({name,msg});
-  }
 
 
   sendQuery(uid,message)
   {
-    let URI = "https://figurable-jack.000webhostapp.com/cyril/";
+    let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
           options   : any    = { "key" : "create", "uid" : uid,
@@ -58,7 +49,7 @@ export class MessageProvider {
 
   getQuery()
   {
-    let URI = "https://figurable-jack.000webhostapp.com/cyril/get_all_query.php";
+    let URI = "http://endln.com/TNCCA/get_all_query.php";
     return this.http.get(URI);
   }
 
