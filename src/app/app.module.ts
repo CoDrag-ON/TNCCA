@@ -47,6 +47,7 @@ import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
 
 import { CallNumber } from '@ionic-native/call-number';
 import { MessageModelPage } from '../pages/message-model/message-model';
+import { StreamingMedia } from '@ionic-native/streaming-media';
 
 
 // AF2 Settings
@@ -122,7 +123,8 @@ export const firebaseConfig = {
     EventCommentProvider,
     UserProvider,
     Camera,
-    CallNumber
+    CallNumber,
+    StreamingMedia
   ]
 })
 export class AppModule {}
