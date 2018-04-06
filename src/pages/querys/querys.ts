@@ -52,10 +52,10 @@ export class QuerysPage {
         this.msg = "";
       })
       ,500)
-  }
+  } 
   showComents(id){
     console.log(id);
-    this.model.presentMessageModel(id,this.name)
+    this.model.presentMessageModel(id)
   }
 
 }

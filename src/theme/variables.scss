@@ -34,11 +34,13 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    rgb(139, 94, 252),
-  secondary:  rgb(253, 206, 66),
+  primary:    #9343a1,
+  secondary:  #fd4b57,
   danger:     rgb(252, 59, 41),
   light:      rgb(255, 255, 255),
-  dark:       #57612D
+  dark:       #57612D,
+  main:       #6e3278,
+  sec :       #fd4b57
 );
 // #F5DFB5 luxury gold
 
@@ -82,7 +84,8 @@ $colors: (
 
 
 // Fonts
-// --------------------------------------------------
+// -------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Cabin');
 
 @import "roboto";
 @import "noto-sans";

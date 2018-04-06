@@ -15,18 +15,13 @@ export class TabsPage {
   tab3Root = 'HomePage';
   tab4Root = 'QuerysPage';
 
-
-
-  
-
-  
-
   constructor(public navCtrl: NavController) {
+     
+  }
 
+  doClick(){
     
   }
- 
-
   openAccount()
   {
     this.navCtrl.push(AboutPage)

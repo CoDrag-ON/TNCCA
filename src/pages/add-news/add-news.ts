@@ -29,7 +29,7 @@ export class AddNewsPage {
   }
 
   addEvent(){
-    this,this.news.insertEvent(this.title,this.body);
+    this.news.insertEvent(this.title,this.body);
     this.navCtrl.pop()
   }
   cancel()

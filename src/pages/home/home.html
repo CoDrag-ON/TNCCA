@@ -13,24 +13,18 @@
   </ion-header>
 
 
-<ion-content >
+<ion-content class="bg-style" >
 
   <ion-list >
   
-      <ion-card *ngFor="let event of Events">
+      <ion-card *ngFor="let event of Events" (click)="showComents(event?.id)">
           <ion-card-header color = "primary" text-center>
             {{event?.title}}
           </ion-card-header>
-          <ion-card-content text-center>
+          <ion-card-content class="fot" text-center>
               {{event?.body}}          
             </ion-card-content>
-         <ion-buttons (click)="showComents(event?.id)" end>
-            <button ion-button icon-only clear >
-              <ion-icon name="ios-chatboxes" >
-              </ion-icon>
-
-            </button>
-          </ion-buttons>
+         
         </ion-card>
   </ion-list>
 

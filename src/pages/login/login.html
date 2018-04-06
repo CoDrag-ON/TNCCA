@@ -6,40 +6,34 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary" align="center">
-    <ion-title>TNCCA</ion-title>
-    </ion-navbar>
+  <ion-navbar align="center" color="primary">
+        <img src="../assets/imgs/login_tab.png"/>
+  </ion-navbar>
 
 </ion-header>
-
-
 <ion-content  >
+    
+    <ion-list padding-left padding-right >
 
- 
-
-  
-
-
-    <ion-list padding>
-
-        <ion-item inset >
+        <ion-item  >
             <ion-label floating>Email</ion-label>
-          <ion-input [(ngModel)]="email" type="text" ></ion-input>
+            <ion-input [(ngModel)]="email" type="text" ></ion-input>
         </ion-item>
-      
         <ion-item>
             <ion-label floating>Password</ion-label>
             <ion-input [(ngModel)]="password" type="password" ></ion-input>
         </ion-item>
 
-        <div padding-top>
-            <button ion-button block  (click)="navLogin()" >Login</button>
+        <div>
+            <button ion-button full round  (click)="navLogin()" >Login</button>
 
         </div>
-        <div padding-top>
-          <button ion-button block color="secondary"   (click)="navSignup()" >Signup</button>
+        
+        <div  align="center">
+          <p clear color="secondary"   (click)="navSignup()" >New user..? <a href="#" (click)="navSignup()">Signup </a> </p>
         </div>
       
 
       </ion-list>
+    
 </ion-content>

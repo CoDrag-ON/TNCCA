@@ -31,7 +31,6 @@ import { HomePage } from '../pages/home/home';
 import { AddSongsPage } from '../pages/add-songs/add-songs';
 import { AllSongsPage } from '../pages/all-songs/all-songs';
 import { AllNewsPage } from '../pages/all-news/all-news';
-import { AboutPage } from '../pages/about/about';
 import { SongsProvider } from '../providers/songs/songs';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -48,6 +47,8 @@ import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
 import { CallNumber } from '@ionic-native/call-number';
 import { MessageModelPage } from '../pages/message-model/message-model';
 import { StreamingMedia } from '@ionic-native/streaming-media';
+import { MsgCommentsProvider } from '../providers/msg-comments/msg-comments';
+import { AboutPage } from '../pages/about/about';
 
 
 // AF2 Settings
@@ -63,6 +64,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
+
     TabsPage,
     LoginPage,
     AddNewsPage,
@@ -70,11 +72,10 @@ export const firebaseConfig = {
     AdminPage,
     AllSongsPage,
     AllNewsPage,
-    AboutPage,
     ModelPage,
     TodayMessagePage,
-    AboutTnccaPage,
-    MessageModelPage
+    MessageModelPage,
+    AboutPage
     
     
   ],
@@ -93,6 +94,7 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+
     LoginPage,
     TabsPage,
     AddNewsPage,
@@ -100,11 +102,10 @@ export const firebaseConfig = {
     AdminPage,
     AllSongsPage,
     AllNewsPage,
-    AboutPage,
     ModelPage,
     TodayMessagePage,
-    AboutTnccaPage,
-    MessageModelPage
+    MessageModelPage,
+    AboutPage
     
   ],
   providers: [
@@ -124,7 +125,8 @@ export const firebaseConfig = {
     UserProvider,
     Camera,
     CallNumber,
-    StreamingMedia
+    StreamingMedia,
+    MsgCommentsProvider
   ]
 })
 export class AppModule {}

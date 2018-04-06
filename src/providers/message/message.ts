@@ -53,4 +53,16 @@ export class MessageProvider {
     return this.http.get(URI);
   }
 
+  get(qid)
+  {
+    let URI = "http://endln.com/TNCCA/";
+
+    let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+        options   : any    = { "key" : "select", "qid" : qid},
+      
+          url       : any        = URI+ "query.php";
+
+     return this.http.post(url, JSON.stringify(options), headers)
+  }
+
 }

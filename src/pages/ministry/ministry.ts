@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { TodayMessagePage } from '../today-message/today-message';
 
-import { AboutPage } from '../about/about';
+import { AboutTnccaPage } from '../about-tncca/about-tncca';
 
 
 
@@ -38,7 +38,7 @@ export class MinistryPage {
   
   openAccount()
   {
-    this.navCtrl.push(AboutPage)
+    //this.navCtrl.push(AboutPage)
   }
 
 
@@ -49,6 +49,9 @@ export class MinistryPage {
     const browser = this.iab.create('http://www.arulvakku.com/index.html');
     browser.insertCSS({ code: "head{color: red;" }); 
   }
-  c
+  abtUs()
+  {
+    this.navCtrl.push("AboutTnccaPage")
+  }
 
 }

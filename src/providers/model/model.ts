@@ -22,11 +22,11 @@ export class ModelProvider {
     profileModal.present();
   }
 
-  presentMessageModel(id,u_id)
+  presentMessageModel(id)
   {
     let MessageModel = this.modalCtrl.create(MessageModelPage,{
       ID:id,
-      u_id:u_id
+      
     });
     MessageModel.present();
   }

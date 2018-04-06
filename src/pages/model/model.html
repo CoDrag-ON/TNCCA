@@ -18,11 +18,11 @@
 </ion-header>
 
 
-<ion-content >
+<ion-content class="bg-style" >
 
-  <ion-list inset>
+  <ion-list >
     
-       <h4 align="center">{{eventDetail?.body}}</h4> 
+       <h4 ion-text color="secondary" align="center">{{eventDetail?.body}}</h4> 
     
       <ion-item *ngFor="let cmd of Comments">
         <h2 ion-text color="primary">{{cmd.u_id}}</h2>

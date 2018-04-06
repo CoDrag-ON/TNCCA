@@ -1,18 +1,19 @@
 page-ministry {
-<<<<<<< HEAD
-  background-color: steelblue !important;
- 
+ .fot{
+  font-family: 'Cabin', sans-serif;
+   padding-top: 20px;
+   font-size: 22.5px !important;
+ }
   ion-card{
-    box-shadow: #272727;
-    font-size: 100px !important;
-    background-color: rgba(43, 99, 255, 0.822) !important;
+    background-color: rgba(82, 82, 82, 0.822)  !important;
     color:white !important;
-    font-weight: bolder;
-    font-size: 1000px !important;
+    border-radius: 5px!important;
+    height: 100px;
+    min-height: 100px;
+    box-shadow: rgb(78, 78, 78);
+    
     
 }
-=======
->>>>>>> 65653d08c0cd86746e8b374c85aaeb2fb3f974b3
 
 }
 

@@ -5,8 +5,8 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar align="center">
-    <ion-title>Comments</ion-title>
+  <ion-navbar align="center" color="primary">
+    <ion-title>{{message?.uid}}</ion-title>
     <ion-buttons end>
         <button (click)="close()"  large ion-button >
           Close
@@ -17,22 +17,15 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="bg-style" padding>
 
-    <ion-card>
-        <ion-card-header>
-            {{message?.body}}
-        </ion-card-header>
-        <ion-card padding *ngFor="let cmd of Comments">
-            <ion-card-header>
-                {{cmd.u_id}}
-            </ion-card-header>
-            <ion-card-content>
-                {{cmd.comment}}
-            </ion-card-content>
-          </ion-card>  
-    </ion-card>
-
+    <ion-list>
+        
+        <ion-item padding *ngFor="let cmd of Comments">
+                <h2 ion-text color="primary">{{cmd.u_id}}</h2>
+                <h3> {{cmd.comment}}</h3>
+        </ion-item>
+    </ion-list>
 </ion-content>
 
 <ion-footer>
