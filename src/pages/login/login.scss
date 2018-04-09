@@ -1,11 +1,12 @@
 page-login {
 
-    ion-navbar{
-        height: 320px;
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgb(71, 71, 71)!important;
         
     }
+    
     img{
         width: 100%!important;
-        height: 50%!important;
+        height: 40%!important;
     }
 }

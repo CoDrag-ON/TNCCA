@@ -14,4 +14,9 @@ export class SongsProvider {
     console.log('Hello SongsProvider Provider');
   }
 
+  getAll()
+  {
+    return this.http.get("http://endln.com/TNCCA/getAllSongs.php");
+  }
+
 }

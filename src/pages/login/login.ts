@@ -6,6 +6,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 
 import { ToastProvider } from '../../providers/toast/toast';
 import { UserProvider } from '../../providers/user/user';
+import { SignupPage } from '../signup/signup';
 
 
 /**
@@ -42,6 +43,10 @@ export class LoginPage {
 
   navLogin()
   {
+    if(this.email === "admin" && this.password === "admin")
+    {
+      this.navCtrl.setRoot(AdminPage)
+    }
     if( this.email != null || this.password != null)
     {
       this.auth.login(this.email,this.password).subscribe(data=>{
@@ -66,16 +71,13 @@ export class LoginPage {
       //
 
     }
-    if(this.email === "admin" && this.password === "admin")
-    {
-      this.navCtrl.setRoot(AdminPage)
-    }
+    
    
     
   }
   navSignup()
   {
-    this.navCtrl.push('SignupPage')
+    this.navCtrl.push(SignupPage)
   }
 
 }

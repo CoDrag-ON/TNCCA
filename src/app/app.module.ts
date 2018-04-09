@@ -34,6 +34,8 @@ import { AllNewsPage } from '../pages/all-news/all-news';
 import { SongsProvider } from '../providers/songs/songs';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
+import { FileChooser } from '@ionic-native/file-chooser';
+
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { ModelProvider } from '../providers/model/model';
@@ -50,6 +52,18 @@ import { StreamingMedia } from '@ionic-native/streaming-media';
 import { MsgCommentsProvider } from '../providers/msg-comments/msg-comments';
 import { AboutPage } from '../pages/about/about';
 
+import { BackgroundMode } from '@ionic-native/background-mode';
+
+
+
+
+import { FilePath } from '@ionic-native/file-path';
+import { SignupPage } from '../pages/signup/signup';
+import { MinistryPage } from '../pages/ministry/ministry';
+import { SongsPage } from '../pages/songs/songs';
+import { QuerysPage } from '../pages/querys/querys';
+
+
 
 // AF2 Settings
 export const firebaseConfig = {
@@ -64,7 +78,7 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-
+    SignupPage,
     TabsPage,
     LoginPage,
     AddNewsPage,
@@ -75,7 +89,12 @@ export const firebaseConfig = {
     ModelPage,
     TodayMessagePage,
     MessageModelPage,
-    AboutPage
+    AboutPage,
+    AboutTnccaPage,
+    MinistryPage,
+    SongsPage,
+    HomePage,
+    QuerysPage
     
     
   ],
@@ -94,7 +113,7 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-
+    SignupPage,
     LoginPage,
     TabsPage,
     AddNewsPage,
@@ -105,7 +124,12 @@ export const firebaseConfig = {
     ModelPage,
     TodayMessagePage,
     MessageModelPage,
-    AboutPage
+    AboutPage,
+    AboutTnccaPage,
+    MinistryPage,
+    SongsPage,
+    HomePage,
+    QuerysPage
     
   ],
   providers: [
@@ -120,13 +144,16 @@ export const firebaseConfig = {
     InAppBrowser,
     FileTransfer,
     File,
+    FileChooser,
+    FilePath,
     ModelProvider,
     EventCommentProvider,
     UserProvider,
     Camera,
     CallNumber,
     StreamingMedia,
-    MsgCommentsProvider
+    MsgCommentsProvider,
+    BackgroundMode,
   ]
 })
 export class AppModule {}

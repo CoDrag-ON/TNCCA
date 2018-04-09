@@ -51,7 +51,7 @@ export class MinistryPage {
   }
   abtUs()
   {
-    this.navCtrl.push("AboutTnccaPage")
+    this.navCtrl.push(AboutTnccaPage)
   }
 
 }

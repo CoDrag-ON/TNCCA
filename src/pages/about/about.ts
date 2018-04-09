@@ -115,12 +115,9 @@ export class AboutPage {
   logout(){
     this.navCtrl.setRoot(LoginPage)
 
-    this.storage.set('HAS_LOGGED_IN',false)
+    this.storage.set('LoggedIn', false);
   }
 
-  abtUs()
-  {
-    this.navCtrl.push(AboutTnccaPage);
-  }
+ 
 
 }

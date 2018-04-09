@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams ,LoadingController, ToastController } from 'ionic-angular';
 
 import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-media';
+import { SongsProvider } from '../../providers/songs/songs';
 
 
 /**
@@ -17,24 +18,33 @@ import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-m
   templateUrl: 'songs.html',
 })
 export class SongsPage {
+
+  Songs:any;
+
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
-     private streamingMedia: StreamingMedia
+     private streamingMedia: StreamingMedia,
+     private songs:SongsProvider
     ) {
-      
+      this.songs.getAll().subscribe(data=>{
+        console.log(data)
+        this.Songs = data
+      })
      
     
   }
 
-  play()
+  play(link)
   {
+    let URI = 'http://endln.com/TNCCA/'+ link
     let options: StreamingAudioOptions = {
       successCallback: () => { console.log('Video played') },
       errorCallback: (e) => { console.log('Error streaming') },
       initFullscreen: false,
       
     };
-    this.streamingMedia.playAudio('http://endln.com/TNCCA/songs/Kadhal_Kappal-StarMusiQ.Com.mp3', options);
+    console.log(URI)
+    this.streamingMedia.playAudio(URI, options);
 
   }
 

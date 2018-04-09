@@ -8,49 +8,73 @@
 
   <ion-navbar  color="primary">
     <ion-title>About</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="md-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content class="bg-style" >
-
-
-
-  <ion-card>
-    <ion-card-header text-center>
-      Information
-    </ion-card-header>
-
-    <ion-list>
-      <ion-item >
+  <div class="profile" align="center" ion-text color="light">
+   
         {{Name}}
-      </ion-item>
-      <ion-item >
-        {{DOB}}
-      </ion-item>
-      <ion-item >
-        {{Place}}
-      </ion-item>
-      <ion-item >
-        {{City}}
-      </ion-item>
-      <ion-item >
-        {{Parish}}
-      </ion-item>
-      <ion-item >
-        {{Diocese}}
-      </ion-item>
-    </ion-list>
-  </ion-card>
-
-  
-
-  
-  <div >
-      <button round  ion-button  block  (click)="logout()" color="danger" >Logout</button>
-
+   
+   
   </div>
+  
+  <ion-list>
+    <ion-item>
+      <h6>
+        Place
+      </h6>
+      <h4>
+          {{Place}}
+      </h4>
+      
+    </ion-item>
+    <ion-item>
+        <h6>
+            City
+          </h6>
+          <h4>
+              {{City}}
+          </h4>
+    </ion-item>
+    <ion-item>
+        <h6>
+            Parish
+          </h6>
+          <h4>
+              {{Parish}}
+          </h4>
+    </ion-item>
+    <ion-item>
+        <h6>
+            Diocese
+          </h6>
+          <h4>
+              {{Diocese}}
+          </h4>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    
+    <ion-item>
+      {{About}}
+    </ion-item>
+  </ion-list>
+
+
+
+
+  
+
+  
 
 
 
