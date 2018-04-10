@@ -48,7 +48,7 @@ export class AdminPage {
 
   openAddEvent()
   {
-    this.navCtrl.push(AddNewsPage);
+    this.navCtrl.push("AddNewsPage");
 
   }
   AddMusic()
@@ -83,12 +83,12 @@ export class AdminPage {
 
   openAllNews()
   {
-    this.navCtrl.push(AllNewsPage)
+    this.navCtrl.push("AllNewsPage")
   }
 
   openAllSongs()
   {
-    this.navCtrl.push(AllSongsPage)
+    this.navCtrl.push("AllSongsPage")
   }
 
 

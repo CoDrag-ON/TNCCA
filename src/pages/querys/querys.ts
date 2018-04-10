@@ -7,7 +7,6 @@ import { ModelProvider } from '../../providers/model/model';
 
 
 
-@IonicPage()
 @Component({
   selector: 'page-querys',
   templateUrl: 'querys.html',

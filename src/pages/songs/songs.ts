@@ -12,7 +12,6 @@ import { SongsProvider } from '../../providers/songs/songs';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-songs',
   templateUrl: 'songs.html',

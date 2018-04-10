@@ -11,7 +11,6 @@ import { ModelProvider } from '../../providers/model/model';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',

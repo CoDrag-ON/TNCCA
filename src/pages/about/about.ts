@@ -113,7 +113,7 @@ export class AboutPage {
   }
 
   logout(){
-    this.navCtrl.setRoot(LoginPage)
+    this.navCtrl.setRoot("LoginPage")
 
     this.storage.set('LoggedIn', false);
   }

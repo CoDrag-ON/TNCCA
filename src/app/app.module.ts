@@ -20,17 +20,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { MessageProvider } from '../providers/message/message';
 import { HttpClientModule } from '@angular/common/http';
-import { ForumPage } from '../pages/forum/forum';
 import { AuthProvider } from '../providers/auth/auth';
 import { NewsProvider } from '../providers/news/news';
-import { AddNewsPage } from '../pages/add-news/add-news';
 import { ToastProvider } from '../providers/toast/toast';
 import { HttpModule } from '@angular/http';
-import { AdminPage } from '../pages/admin/admin';
 import { HomePage } from '../pages/home/home';
-import { AddSongsPage } from '../pages/add-songs/add-songs';
-import { AllSongsPage } from '../pages/all-songs/all-songs';
-import { AllNewsPage } from '../pages/all-news/all-news';
+
 import { SongsProvider } from '../providers/songs/songs';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
@@ -39,12 +34,10 @@ import { FileChooser } from '@ionic-native/file-chooser';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { ModelProvider } from '../providers/model/model';
-import { ModelPage } from '../pages/model/model';
 import { EventCommentProvider } from '../providers/event-comment/event-comment';
 import { UserProvider } from '../providers/user/user';
 import { Camera } from '@ionic-native/camera';
-import { TodayMessagePage } from '../pages/today-message/today-message';
-import { AboutTnccaPage } from '../pages/about-tncca/about-tncca';
+
 
 import { CallNumber } from '@ionic-native/call-number';
 import { MessageModelPage } from '../pages/message-model/message-model';
@@ -58,7 +51,6 @@ import { BackgroundMode } from '@ionic-native/background-mode';
 
 
 import { FilePath } from '@ionic-native/file-path';
-import { SignupPage } from '../pages/signup/signup';
 import { MinistryPage } from '../pages/ministry/ministry';
 import { SongsPage } from '../pages/songs/songs';
 import { QuerysPage } from '../pages/querys/querys';
@@ -78,23 +70,14 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    SignupPage,
     TabsPage,
-    LoginPage,
-    AddNewsPage,
-    AddSongsPage,
-    AdminPage,
-    AllSongsPage,
-    AllNewsPage,
-    ModelPage,
-    TodayMessagePage,
-    MessageModelPage,
-    AboutPage,
-    AboutTnccaPage,
     MinistryPage,
     SongsPage,
     HomePage,
     QuerysPage
+
+
+    
     
     
   ],
@@ -113,23 +96,15 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    SignupPage,
-    LoginPage,
     TabsPage,
-    AddNewsPage,
-    AddSongsPage,
-    AdminPage,
-    AllSongsPage,
-    AllNewsPage,
-    ModelPage,
-    TodayMessagePage,
-    MessageModelPage,
-    AboutPage,
-    AboutTnccaPage,
     MinistryPage,
     SongsPage,
     HomePage,
     QuerysPage
+
+ 
+    
+    
     
   ],
   providers: [

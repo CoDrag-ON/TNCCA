@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {  NavController } from 'ionic-angular';
-import { ForumPage } from '../forum/forum';
-import { AboutPage } from '../about/about';
+
 import { MinistryPage } from '../ministry/ministry';
 import { SongsPage } from '../songs/songs';
 import { HomePage } from '../home/home';
@@ -28,6 +27,6 @@ export class TabsPage {
   }
   openAccount()
   {
-    this.navCtrl.push(AboutPage)
+    this.navCtrl.push("AboutPage")
   }
 }

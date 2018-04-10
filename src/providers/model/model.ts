@@ -16,7 +16,7 @@ export class ModelProvider {
 
   presentEventModal(id) {
     console.log("From Model provider " + id )
-    let profileModal = this.modalCtrl.create(ModelPage,{
+    let profileModal = this.modalCtrl.create("ModelPage",{
       ID:id
     });
     profileModal.present();
@@ -24,7 +24,7 @@ export class ModelProvider {
 
   presentMessageModel(id)
   {
-    let MessageModel = this.modalCtrl.create(MessageModelPage,{
+    let MessageModel = this.modalCtrl.create("MessageModelPage",{
       ID:id,
       
     });

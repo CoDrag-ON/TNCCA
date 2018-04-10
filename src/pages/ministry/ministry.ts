@@ -14,7 +14,6 @@ import { AboutTnccaPage } from '../about-tncca/about-tncca';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-ministry',
   templateUrl: 'ministry.html',
@@ -25,7 +24,7 @@ export class MinistryPage {
   }
 
   navToMessage(){
-    this.navCtrl.push(TodayMessagePage)
+    this.navCtrl.push("TodayMessagePage")
   }
 
 
@@ -51,7 +50,7 @@ export class MinistryPage {
   }
   abtUs()
   {
-    this.navCtrl.push(AboutTnccaPage)
+    this.navCtrl.push("AboutTnccaPage")
   }
 
 }
