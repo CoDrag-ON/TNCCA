@@ -5,14 +5,8 @@ import { LoadingController } from 'ionic-angular';
 import { ToastProvider } from '../../providers/toast/toast';
 
 
-/**
- * Generated class for the SignupPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
-@IonicPage()
+
 @Component({
   selector: 'page-signup',
   templateUrl: 'signup.html',
@@ -48,13 +42,10 @@ export class SignupPage {
   }
 
   ionViewDidLoad() {
-    
     console.log('ionViewDidLoad SignupPage');
   }
   SendData()
   {
-
-  
       this.auth.insertUser(
         this.Name,
         this.DOB,
@@ -76,14 +67,14 @@ export class SignupPage {
 
   signup() {
     let loader = this.loadingCtrl.create({
-      content: "Creating Accoumt",
+      content: "Creating account",
       duration: 3000
     });
     loader.present();
 
     setTimeout(()=>{
       this.SendData()
-      this.navCtrl.pop()
+      //this.navCtrl.pop()
 
     })
   }

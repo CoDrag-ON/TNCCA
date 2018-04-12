@@ -10,14 +10,15 @@ import { FileChooser } from '@ionic-native/file-chooser';
 import { FilePath } from '@ionic-native/file-path';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 
+
+import { StatusBar } from '@ionic-native/status-bar';
+
 /**
  * Generated class for the AdminPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
-@IonicPage()
 @Component({
   selector: 'page-admin',
   templateUrl: 'admin.html',
@@ -31,7 +32,11 @@ export class AdminPage {
     private auth:AuthProvider,
     private fileChooser: FileChooser,
    private filePath:FilePath,
-   private transfer:FileTransfer) {
+   private transfer:FileTransfer,
+  private statusBar:StatusBar) {
+
+
+    this.statusBar.backgroundColorByHexString('#FC3B29');
   }
 
   ionViewDidLoad() {
@@ -92,5 +97,11 @@ export class AdminPage {
   }
 
 
+  deleteUser(id){
+    console.log(id)
+    this.auth.delete(id).subscribe((data)=>{
+      console.log(id)
+    })
+  }
 
 }

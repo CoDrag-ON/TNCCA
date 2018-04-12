@@ -52,6 +52,8 @@ $colors: (
 
 
 // App Material Design Variables
+
+
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
@@ -75,6 +77,11 @@ $colors: (
 @import "ionic.theme.default";
 
 
+$tabs-md-background:rgb(34, 34, 34);
+$tabs-md-tab-icon-color:#fff;
+$tabs-md-tab-icon-color-active:#fd4b57;
+$tabs-md-tab-text-color-active:#fd4b57;
+$tabs-md-tab-text-color:#fff;
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:

@@ -1,17 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild,ElementRef, AfterViewChecked, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MessageProvider } from '../../providers/message/message';
 import { Storage } from '@ionic/storage';
 
 import { ModelProvider } from '../../providers/model/model';
+import { Content } from 'ionic-angular';
 
 
 
 @Component({
   selector: 'page-querys',
   templateUrl: 'querys.html',
+  
 })
-export class QuerysPage {
+export class QuerysPage implements AfterViewChecked {
+
+  @ViewChild('scroller')  scroller: Content;
+  
+
+  
 
   msg:string;
   name:string;
@@ -36,10 +43,19 @@ export class QuerysPage {
         }
         ));
   }
+  ngAfterViewChecked(){
+    
+  }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad QuerysPage');
+    this.scrollToBottom();
+   
   }
+  scrollToBottom(): void {
+    setTimeout(()=>{
+      this.scroller.scrollToBottom(300)
+    },1000
+   )}
 
   sendMsg(){
 
@@ -51,10 +67,13 @@ export class QuerysPage {
         this.msg = "";
       })
       ,500)
+      this.scrollToBottom();
   } 
   showComents(id){
     console.log(id);
     this.model.presentMessageModel(id)
   }
+
+  
 
 }

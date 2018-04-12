@@ -7,12 +7,6 @@ import { AboutTnccaPage } from '../about-tncca/about-tncca';
 
 
 
-/**
- * Generated class for the MinistryPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-ministry',
@@ -23,22 +17,14 @@ export class MinistryPage {
   constructor(private iab: InAppBrowser,public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  navToMessage(){
-    this.navCtrl.push("TodayMessagePage")
-  }
-
-
-
-
+ 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MinistryPage');
   }
-
-  
-  openAccount()
-  {
-    //this.navCtrl.push(AboutPage)
+  navToMessage(){
+    this.navCtrl.push("TodayMessagePage")
   }
+ 
 
 
 

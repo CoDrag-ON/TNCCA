@@ -65,5 +65,18 @@ export class AuthProvider {
       
   }
 
+  delete(id)
+  {
+    let URI = "http://endln.com/TNCCA/";
+
+    let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+        options   : any    = { "key" : "delete", "id" : id},
+      
+          url       : any        = URI+ "user.php";
+
+      return this.http.post(url, JSON.stringify(options), headers)
+      
+  }
+
 
 }

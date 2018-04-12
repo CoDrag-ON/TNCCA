@@ -6,54 +6,58 @@
 -->
 <ion-header>
 
-  <ion-navbar color="danger"  >
-    <ion-title >Admin</ion-title>
-
-    <ion-buttons end>
-        <button (click)="openAllNews()" ion-button icon-only>
-          <ion-icon name="md-paper"></ion-icon>
-        </button>
-    </ion-buttons>
-
-    <ion-buttons end>
-        <button (click)="openAllSongs()" ion-button icon-only>
-          <ion-icon name="md-musical-notes"></ion-icon>
-        </button>
-    </ion-buttons>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content >
-
-  <ion-card>
-    <ion-card-header class="header">
-      Users
-    </ion-card-header>
-    
-      <ion-list>
-        <ion-item >
-            <ion-grid >
-                <ion-row *ngFor="let user of AllUsers "  >
-                  <ion-col  col-4>{{user?.id}}</ion-col>
-                  <ion-col col-8>{{user?.name}}</ion-col>
-                </ion-row>
-              </ion-grid>
-        </ion-item>
-      </ion-list>
-   
-  </ion-card>
-
-</ion-content>
-
-<ion-footer>
-    <ion-fab right bottom>
-        <button ion-fab color="danger"><ion-icon name="md-add"></ion-icon></button>
-        <ion-fab-list side="top">
-          <button (click)="openAddEvent()" ion-fab><ion-icon name="md-paper"></ion-icon></button>
-          <button (click)="AddMusic()"  ion-fab><ion-icon name="md-musical-notes"></ion-icon></button>
-          
-        </ion-fab-list>
-      </ion-fab>
-</ion-footer>
+    <ion-navbar color="danger"  >
+      <ion-title >Admin</ion-title>
+  
+      <ion-buttons end>
+          <button (click)="openAllNews()" ion-button icon-only>
+            <ion-icon name="md-paper"></ion-icon>
+          </button>
+      </ion-buttons>
+  
+      <ion-buttons end>
+          <button (click)="openAllSongs()" ion-button icon-only>
+            <ion-icon name="md-musical-notes"></ion-icon>
+          </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content >
+  
+    <ion-card>
+      <ion-card-header align="center" class="header">
+        Users
+      </ion-card-header>
+      
+        <ion-list>
+          <ion-item *ngFor="let user of AllUsers "  >
+              <ion-grid >
+                  <ion-row   >
+                    <ion-col  col-2>{{user?.id}}</ion-col>
+                    <ion-col col-8>{{user?.name}}</ion-col>
+                    <ion-col col-2>
+                      <ion-icon name="md-trash" color="danger" (click)="deleteUser(user?.id)" ></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+          </ion-item>
+        </ion-list>
+     
+    </ion-card>
+  
+  </ion-content>
+  
+  <ion-footer>
+      <ion-fab right bottom>
+          <button ion-fab color="danger"><ion-icon name="md-add"></ion-icon></button>
+          <ion-fab-list side="top">
+            <button (click)="openAddEvent()" ion-fab><ion-icon name="md-paper"></ion-icon></button>
+            <button (click)="AddMusic()"  ion-fab><ion-icon name="md-musical-notes"></ion-icon></button>
+            
+          </ion-fab-list>
+        </ion-fab>
+  </ion-footer>
+  

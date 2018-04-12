@@ -1,6 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, IonicPageModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import {FormsModule} from '@angular/forms';
 
@@ -54,7 +54,12 @@ import { FilePath } from '@ionic-native/file-path';
 import { MinistryPage } from '../pages/ministry/ministry';
 import { SongsPage } from '../pages/songs/songs';
 import { QuerysPage } from '../pages/querys/querys';
+import { AdminPage } from '../pages/admin/admin';
+import { SignupPage } from '../pages/signup/signup';
 
+
+import { SearchPipe } from '../pipes/search/search';
+import { SortPipe } from '../pipes/sort/sort';
 
 
 // AF2 Settings
@@ -69,22 +74,24 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
+
+    
     MyApp,
     TabsPage,
+    AdminPage,
     MinistryPage,
     SongsPage,
     HomePage,
-    QuerysPage
-
-
-    
-    
-    
+    SignupPage,
+    QuerysPage, 
+    SearchPipe,
+    SortPipe
+  
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp),   
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     HttpClientModule,
@@ -97,15 +104,12 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     TabsPage,
+    AdminPage,
     MinistryPage,
     SongsPage,
     HomePage,
-    QuerysPage
-
- 
-    
-    
-    
+    QuerysPage, 
+    SignupPage
   ],
   providers: [
     StatusBar,

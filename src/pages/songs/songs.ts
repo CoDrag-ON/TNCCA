@@ -20,6 +20,10 @@ export class SongsPage {
 
   Songs:any;
 
+  descending: boolean = false;
+  order: number;
+  column: string = 'title';
+
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
      private streamingMedia: StreamingMedia,
@@ -33,13 +37,19 @@ export class SongsPage {
     
   }
 
+  sort(){
+    this.descending = !this.descending;
+    this.order = this.descending ? 1 : -1;
+  }
+
   play(link)
   {
     let URI = 'http://endln.com/TNCCA/'+ link
     let options: StreamingAudioOptions = {
-      successCallback: () => { console.log('Video played') },
+      successCallback: () => { console.log('Audio played') },
       errorCallback: (e) => { console.log('Error streaming') },
-      initFullscreen: false,
+      initFullscreen: true,
+      bgImage:"http://endln.com/TNCCA/images/bg.jpeg"
       
     };
     console.log(URI)

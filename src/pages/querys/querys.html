@@ -8,11 +8,11 @@
 </ion-header>
 
 
-<ion-content class="bg-style" >
+<ion-content #scroller class="bg-style" >
 
 
 
-    <ion-list >
+    <ion-list  >
   
         <ion-card *ngFor="let dis of Discussion" (click)="showComents(dis?.qid)">
             <ion-card-header color = "primary" text-center>

@@ -31,8 +31,7 @@ export class MyApp {
         if(result){
           this.rootPage = TabsPage;
         } else {
-          this.rootPage = LoginPage;
-          this.storage.set('LoggedIn', true);
+          this.rootPage = "LoginPage";
         }
  
         this.loader.dismiss();
@@ -51,7 +50,7 @@ export class MyApp {
     
 
    
-    this.statusBar.backgroundColorByHexString('#9343a1');
+    this.statusBar.backgroundColorByHexString('#582760');
 
     
   }

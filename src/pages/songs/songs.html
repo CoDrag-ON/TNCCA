@@ -9,18 +9,24 @@
   <ion-navbar>
     <ion-title></ion-title>
   </ion-navbar>
+  <ion-searchbar color="primary" [(ngModel)]="terms"></ion-searchbar>
+ 
 
 </ion-header>
 
 
 <ion-content class="bg-style" >
 
-  
-  <ion-card *ngFor="let song of Songs" (click)="play(song.link)">
-    <ion-card-content  class="fot" align="center" >
-        {{song?.title}}
-    </ion-card-content>
-  </ion-card>
+  <ion-list>
+    <ion-list-header align="center">
+      Tap to listen to songs 
+    </ion-list-header>
+    <button ion-item *ngFor="let song of Songs | search : terms |sort :{property:column,order:order}" (click)="play(song.link)">
+      <ion-label  >
+          {{song?.title}}
+      </ion-label>
+    </button>
+  </ion-list>
   
 
 </ion-content>

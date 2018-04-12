@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild,ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AddNewsPage } from '../add-news/add-news';
 import { NewsProvider } from '../../providers/news/news';
 import { ModelProvider } from '../../providers/model/model';
-
+import { Content } from 'ionic-angular';
 /**
  * Generated class for the HomePage page.
  *
@@ -16,7 +16,7 @@ import { ModelProvider } from '../../providers/model/model';
   templateUrl: 'home.html',
 })
 export class HomePage {
-
+  @ViewChild('scroller')  scroller: Content;
   Events:any;
 
   constructor(public navCtrl: NavController,
@@ -34,7 +34,14 @@ export class HomePage {
       this.Events = data
       console.log(data)
     });
+    this.scrollToBottom();
   }
+
+  scrollToBottom(): void {
+    setTimeout(()=>{
+      this.scroller.scrollToBottom(300)
+    },1000
+   )}
 
   showComents(id)
   {
