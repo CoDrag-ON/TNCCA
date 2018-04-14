@@ -5,12 +5,13 @@ page-ministry {
    font-size: 22.5px !important;
  }
   ion-card{
-    background-color: rgba(82, 82, 82, 0.822)  !important;
-    color:white !important;
+   // background:linear-gradient(-80deg, rgb(106, 103, 255), rgb(91, 88, 255)) !important;
+   background: linear-gradient(-80deg,rgb(95, 36, 190),rgb(248, 63, 103)) !important ;
+   color:white !important;
     border-radius: 5px!important;
     height: 100px;
     min-height: 100px;
-    box-shadow: rgb(78, 78, 78);
+    box-shadow: rgba(78, 78, 78, 0.425)!important;
     
     
 }

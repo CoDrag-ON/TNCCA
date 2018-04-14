@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar align="center" color="primary">
+  <ion-navbar color="primary">
     <ion-title>{{message?.uid}}</ion-title>
     <ion-buttons end>
         <button (click)="close()"  large ion-button >
@@ -17,14 +17,14 @@
 </ion-header>
 
 
-<ion-content class="bg-style" padding>
+<ion-content class="bg-style" >
 
     <ion-list>
         
-        <ion-item padding *ngFor="let cmd of Comments">
-                <h2 ion-text color="primary">{{cmd.u_id}}</h2>
+        <button ion-item padding *ngFor="let cmd of Comments">
+                <h2 ion-text >{{cmd.u_id}}</h2>
                 <h3> {{cmd.comment}}</h3>
-        </ion-item>
+        </button>
     </ion-list>
 </ion-content>
 

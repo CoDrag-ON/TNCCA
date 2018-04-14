@@ -27,7 +27,7 @@ export class UserProvider {
         this.storage.set('place', UserDetails.place);
         this.storage.set('city',UserDetails.city);
         this.storage.set('parish',UserDetails.parish);
-        this.storage.set('diacese',UserDetails.diacese);
+        this.storage.set('diocese',UserDetails.diacese);
         this.storage.set('TNCCA', UserDetails.TNCCA_zone);
         this.storage.set('aadhar', UserDetails.aadhar_id);
         this.storage.set('role_in_choir',UserDetails.role_in_choir);
@@ -35,7 +35,6 @@ export class UserProvider {
         this.storage.set('email',UserDetails.email);
         this.storage.set('about',UserDetails.about);
         this.storage.set('HAS_LOGGED_IN',true);
-        console.log(UserDetails)
   }
 
   getUserDetail()

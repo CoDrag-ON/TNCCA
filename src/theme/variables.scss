@@ -39,8 +39,8 @@ $colors: (
   danger:     rgb(252, 59, 41),
   light:      rgb(255, 255, 255),
   dark:       #57612D,
-  main:       #6e3278,
-  sec :       #fd4b57
+  main:       #381c3d,
+  sec :       #ff404c
 );
 // #F5DFB5 luxury gold
 
@@ -77,11 +77,12 @@ $colors: (
 @import "ionic.theme.default";
 
 
-$tabs-md-background:rgb(34, 34, 34);
-$tabs-md-tab-icon-color:#fff;
-$tabs-md-tab-icon-color-active:#fd4b57;
-$tabs-md-tab-text-color-active:#fd4b57;
-$tabs-md-tab-text-color:#fff;
+$tabs-md-background:rgb(44, 44, 44);
+$tabs-md-tab-icon-color:rgb(131, 131, 131);
+$tabs-md-tab-icon-color-active:#ffffff;
+$tabs-md-tab-text-color-active:#ffffff;
+
+$tabs-md-tab-text-color:rgb(139, 139, 139);
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
