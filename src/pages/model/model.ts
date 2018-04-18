@@ -5,6 +5,7 @@ import { EventCommentProvider } from '../../providers/event-comment/event-commen
 import { UserProvider } from '../../providers/user/user';
 
 import { Storage } from '@ionic/storage';
+import { ModelProvider } from '../../providers/model/model';
 @IonicPage()
 @Component({
   selector: 'page-model',
@@ -27,7 +28,9 @@ export class ModelPage {
   private loadingCtrl:LoadingController,
   private eventCmt:EventCommentProvider,
   private user:UserProvider,
-  private storage:Storage
+  private storage:Storage,
+  private model:ModelProvider
+  
   ) {
 
     this.storage.get('name').then((val)=>
@@ -72,8 +75,6 @@ export class ModelPage {
     this.view.dismiss();
   }
 
-
-
   sendCmt(){
 
     
@@ -86,6 +87,13 @@ export class ModelPage {
       console.log(this.Comments)
     })
     this.msg = ""
+  }
+
+
+  ViewReplay(id,e_id)
+  {
+    console.log(id,e_id);
+    this.model.presentEventReplayModel(id,e_id);
   }
 
 }

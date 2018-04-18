@@ -32,9 +32,9 @@
     
       
     
-      <ion-item *ngFor="let cmd of Comments">
-        <h2 ion-text color="primary">{{cmd.u_id}}</h2>
-        <h3> {{cmd.comment}}</h3>
+      <ion-item *ngFor="let cmd of Comments" (click)="ViewReplay(cmd?.id,cmd?.e_id)">
+        <h2 ion-text color="primary">{{cmd?.u_id}}</h2>
+        <h3> {{cmd?.comment}}</h3>
           
       </ion-item>
     </ion-list>

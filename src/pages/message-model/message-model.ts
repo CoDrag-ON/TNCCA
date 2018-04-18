@@ -5,13 +5,9 @@ import { MsgCommentsProvider } from '../../providers/msg-comments/msg-comments';
 
 import { Storage } from '@ionic/storage';
 import { MessageProvider } from '../../providers/message/message';
+import { ModelProvider } from '../../providers/model/model';
 
-/**
- * Generated class for the MessageModelPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -33,7 +29,8 @@ export class MessageModelPage {
      private loadingCtrl:LoadingController,
      private storage:Storage,
      private msgcmt:MsgCommentsProvider,
-    private msgp:MessageProvider) {
+    private msgp:MessageProvider,
+  private model:ModelProvider) {
 
       
 
@@ -93,5 +90,13 @@ export class MessageModelPage {
       loading.dismiss();
     }, 3000);
   }
+
+  ViewReplay(id,q_id)
+  {
+    this.model.presentQueryReplayModel(id,q_id);
+    console.log(id,q_id);
+    
+  }
+
 
 }

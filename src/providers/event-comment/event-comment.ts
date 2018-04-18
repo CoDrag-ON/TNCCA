@@ -17,13 +17,12 @@ export class EventCommentProvider {
   }
 
   insertComment(e_id,u_id,comment)
-
   {
+    console.log(e_id,u_id);
   	let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
-          options   : any    = { "key" : "create", "e_id" : e_id,
-           "u_id" : u_id, "comment" : comment},
+          options   : any    = { "key" : "create", "e_id" : e_id,"u_id" :u_id,"comment" : comment},
       
 
           url       : any        = URI+ "event_comments.php";
@@ -31,9 +30,8 @@ export class EventCommentProvider {
       this.http.post(url, JSON.stringify(options), headers)
       .subscribe((data : any) =>
       {
-         // If the request was successful notify the user
-         
-         
+         // If the request was successful notify the user 
+         console.log(e_id,u_id); 
       },
       (error : any) =>
       {
@@ -42,12 +40,36 @@ export class EventCommentProvider {
 
   }
 
-  getComment(e_id)
+  insertCommentReplay(id, e_id, u_id, comment)
+  {
+    let URI = "http://endln.com/TNCCA/";
+    console.log(e_id,u_id);
+
+    let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+          options   : any    = { "key" : "replay", "e_id" : e_id,
+          "u_id" :u_id, "comment" : comment, "par" : id},
+      
+
+          url       : any        = URI+ "event_comments.php";
+
+      this.http.post(url, JSON.stringify(options), headers)
+      .subscribe((data : any) =>
+      {
+         // If the request was successful notify the user  
+      },
+      (error : any) =>
+      {
+         console.log(error)
+      });
+
+  }
+
+  getComment(eid)
   {
     let URI = "http://endln.com/TNCCA/";
 
     let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
-          options   : any    = { "key" : "select", "e_id" : e_id,
+          options   : any    = { "key" : "select", "e_id" : eid,
            },
       
 
@@ -55,6 +77,18 @@ export class EventCommentProvider {
 
      return this.http.post(url, JSON.stringify(options), headers)
       
+  }
+
+  getEventReplay(e_id,id)
+  {
+   let URI = "http://endln.com/TNCCA/";
+
+   let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+       options   : any    = { "key" : "selectreply", "e_id" : e_id, "parent" : id},
+     
+         url       : any        = URI+ "event_comments.php";
+
+    return this.http.post(url, JSON.stringify(options), headers)
   }
 
 }

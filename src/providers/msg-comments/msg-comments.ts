@@ -55,4 +55,40 @@ export class MsgCommentsProvider {
       
   }
 
+  getQueryReplay(q_id,id)
+  {
+   let URI = "http://endln.com/TNCCA/";
+
+   let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+       options   : any    = { "key" : "selectreply", "q_id" : q_id, "parent" : id},
+     
+         url       : any        = URI+ "msg_comments.php";
+
+    return this.http.post(url, JSON.stringify(options), headers)
+  }
+
+  insertQueryReplay(id, q_id, u_id, comment)
+  {
+    let URI = "http://endln.com/TNCCA/";
+    console.log(q_id,u_id);
+
+    let headers   : any    = new HttpHeaders({ 'Content-Type': 'application/json' }),
+          options   : any    = { "key" : "replay", "q_id" : q_id,
+          "u_id" :u_id, "comment" : comment, "par" : id},
+      
+
+          url       : any        = URI+ "msg_comments.php";
+
+      this.http.post(url, JSON.stringify(options), headers)
+      .subscribe((data : any) =>
+      {
+         // If the request was successful notify the user  
+      },
+      (error : any) =>
+      {
+         console.log(error)
+      });
+
+  }
+
 }

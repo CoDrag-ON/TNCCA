@@ -1,6 +1,5 @@
 import { Component, ViewChild,ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AddNewsPage } from '../add-news/add-news';
+import { IonicPage,AlertController,LoadingController, NavController, NavParams } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
 import { ModelProvider } from '../../providers/model/model';
 import { Content } from 'ionic-angular';
@@ -17,24 +16,35 @@ import { Content } from 'ionic-angular';
 })
 export class HomePage {
   @ViewChild('scroller')  scroller: Content;
+  
   Events:any;
+
+  loader: any;
+
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
     private news:NewsProvider,
-    private model:ModelProvider) {
+    private model:ModelProvider,
+    public loadingCtrl: LoadingController,
+    public alertCtrl: AlertController) {
 
      
     
   }
 
   ionViewDidLoad() {
+    this.presentLoading();
     this.news.getNews().subscribe((data)=>
     {
       this.Events = data
+      this.scrollToBottom();
       console.log(data)
+      this.loader.dismiss();
+    },(error)=>{
+      this.showAlert();
     });
-    this.scrollToBottom();
+    
   }
 
   scrollToBottom(): void {
@@ -47,6 +57,25 @@ export class HomePage {
   {
     console.log(id)
     this.model.presentEventModal(id)
+  }
+
+  presentLoading() {
+ 
+    this.loader = this.loadingCtrl.create({
+      content: "Loading Events from Database..."
+    });
+ 
+    this.loader.present();
+ 
+  }
+
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Error occured while Loading events',
+      subTitle: 'please check internet connection',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 
 

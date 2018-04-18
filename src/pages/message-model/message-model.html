@@ -21,7 +21,7 @@
 
     <ion-list>
         
-        <button ion-item padding *ngFor="let cmd of Comments">
+        <button ion-item padding *ngFor="let cmd of Comments" (click)="ViewReplay(cmd?.id,cmd?.q_id)">
                 <h2 ion-text >{{cmd.u_id}}</h2>
                 <h3> {{cmd.comment}}</h3>
         </button>

@@ -54,7 +54,6 @@ import { FilePath } from '@ionic-native/file-path';
 import { MinistryPage } from '../pages/ministry/ministry';
 import { SongsPage } from '../pages/songs/songs';
 import { QuerysPage } from '../pages/querys/querys';
-import { AdminPage } from '../pages/admin/admin';
 import { SignupPage } from '../pages/signup/signup';
 
 
@@ -78,7 +77,6 @@ export const firebaseConfig = {
     
     MyApp,
     TabsPage,
-    AdminPage,
     MinistryPage,
     SongsPage,
     HomePage,
@@ -104,7 +102,6 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     TabsPage,
-    AdminPage,
     MinistryPage,
     SongsPage,
     HomePage,

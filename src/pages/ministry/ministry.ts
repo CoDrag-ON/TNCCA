@@ -4,6 +4,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { TodayMessagePage } from '../today-message/today-message';
 
 import { AboutTnccaPage } from '../about-tncca/about-tncca';
+import { HolyMassSongsPage } from '../holy-mass-songs/holy-mass-songs';
 
 
 
@@ -24,13 +25,16 @@ export class MinistryPage {
   navToMessage(){
     this.navCtrl.push("TodayMessagePage")
   }
+  navHolyMAssSongs()
+  {
+    this.navCtrl.push("HolyMassSongsPage")
+  }
  
 
 
 
   viewBible() 
   {
- 
     const browser = this.iab.create('http://www.arulvakku.com/index.html');
     browser.insertCSS({ code: "head{color: red;" }); 
   }

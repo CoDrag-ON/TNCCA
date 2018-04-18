@@ -6,12 +6,14 @@ page-ministry {
  }
   ion-card{
    // background:linear-gradient(-80deg, rgb(106, 103, 255), rgb(91, 88, 255)) !important;
-   background: linear-gradient(-80deg,rgb(95, 36, 190),rgb(248, 63, 103)) !important ;
+   background: linear-gradient(145deg,rgb(108, 48, 226),rgb(116, 66, 216),rgb(114, 68, 204)) !important ;
    color:white !important;
-    border-radius: 5px!important;
+   //border-radius: 15px!important;
     height: 100px;
-    min-height: 100px;
-    box-shadow: rgba(78, 78, 78, 0.425)!important;
+   z-index: 1!important;
+   border-top-right-radius: 25px!important;
+       border-bottom-left-radius: 25px!important;
+   
     
     
 }
