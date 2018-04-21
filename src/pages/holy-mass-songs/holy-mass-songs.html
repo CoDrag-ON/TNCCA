@@ -9,6 +9,7 @@
   <ion-navbar>
     <ion-title>holyMassSongs</ion-title>
   </ion-navbar>
+  <ion-searchbar color="primary" [(ngModel)]="terms"></ion-searchbar>
 
 </ion-header>
 
@@ -26,7 +27,7 @@
     </ion-row>
   </ion-grid>
   <ion-list>
-    <button ion-item *ngFor="let song of songs" (click)="play(song?.link)">
+    <button ion-item *ngFor="let song of Songs | search : terms |sort :{property:column,order:order}"  (click)="play(song?.link)">
       {{song?.title}}
     </button>
   </ion-list>

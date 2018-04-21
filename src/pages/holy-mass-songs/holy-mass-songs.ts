@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AlertController,LoadingController, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SongsProvider } from '../../providers/songs/songs';
 
 /**
@@ -9,23 +9,41 @@ import { SongsProvider } from '../../providers/songs/songs';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-holy-mass-songs',
   templateUrl: 'holy-mass-songs.html',
 })
 export class HolyMassSongsPage {
 
-  songs:any;
+  Songs:any;
+
+
+  loader: any;
+
+  
+  descending: boolean = false;
+  order: number;
+  column: string = 'title';
 
   constructor(public navCtrl: NavController,
      public navParams: NavParams,
-    private song:SongsProvider) {
-
+    private song:SongsProvider,
+    public loadingCtrl: LoadingController,
+    public alertCtrl: AlertController,) {
+      this.presentLoading();
       this.song.getAllHollyMassSongs().subscribe(data=>{
-        this.songs = data;
-        console.log(this.songs)
+        this.Songs = data;
+        //console.log(this.songs)
+        this.loader.dismiss();
+      },(error)=>{
+        this.loader.dismiss();
+      this.showAlert();
       })
+  }
+
+  sort(){
+    this.descending = !this.descending;
+    this.order = this.descending ? 1 : -1;
   }
 
   ionViewDidLoad() {
@@ -36,6 +54,26 @@ export class HolyMassSongsPage {
   {
     this.song.play(link);
   }
+
+  presentLoading() {
+ 
+    this.loader = this.loadingCtrl.create({
+      content: "Loading songs from Database..."
+    });
+ 
+    this.loader.present();
+ 
+  }
+
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Error occured while Loading events',
+      subTitle: 'please check internet connection',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
 
 
 

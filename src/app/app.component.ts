@@ -39,19 +39,19 @@ export class MyApp {
       });
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
+      statusBar.backgroundColorByHexString('#430fa8');
+
       splashScreen.hide();
 
       
       
     });
-    this.backgroundMode.enable();
+    //this.backgroundMode.enable();
     
     
 
    
-    this.statusBar.backgroundColorByHexString('#582760');
-
+    
     
   }
 

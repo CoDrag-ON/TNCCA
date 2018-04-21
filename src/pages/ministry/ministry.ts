@@ -5,6 +5,7 @@ import { TodayMessagePage } from '../today-message/today-message';
 
 import { AboutTnccaPage } from '../about-tncca/about-tncca';
 import { HolyMassSongsPage } from '../holy-mass-songs/holy-mass-songs';
+import { ActivityPage } from '../activity/activity';
 
 
 
@@ -27,7 +28,11 @@ export class MinistryPage {
   }
   navHolyMAssSongs()
   {
-    this.navCtrl.push("HolyMassSongsPage")
+    this.navCtrl.push(HolyMassSongsPage)
+  }
+
+  navToActivity(){
+    this.navCtrl.push(ActivityPage)
   }
  
 

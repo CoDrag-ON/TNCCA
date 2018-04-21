@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SongsProvider } from '../../providers/songs/songs';
 
 @IonicPage()
 @Component({
@@ -11,7 +12,9 @@ export class TodayMessagePage {
   myDate:IDate;
   todayDate = new Date();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams,
+    public songs:SongsProvider) {}
 
   ionViewDidLoad() {
     var dd = this.todayDate.getDay();
@@ -23,6 +26,15 @@ export class TodayMessagePage {
       month : mm,
       year : yyyy
     }
+  }
+
+  get(date)
+  {
+    console.log(date)
+  }
+  play(link)
+  {
+    this.songs.play(link)
   }
 
 }

@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+import {  AlertController,LoadingController } from 'ionic-angular';
+
 
 import { FileChooser } from '@ionic-native/file-chooser';
 import { FilePath } from '@ionic-native/file-path';
@@ -8,20 +10,18 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 
 import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-media';
 
-/*
-  Generated class for the SongsProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class SongsProvider {
 
+  loader: any;
   constructor(public http: HttpClient,
     private fileChooser: FileChooser,
     private filePath:FilePath,
     private transfer:FileTransfer,
-    private streamingMedia: StreamingMedia,) {
+    private streamingMedia: StreamingMedia,
+    public loadingCtrl: LoadingController,
+    public alertCtrl: AlertController) {
     console.log('Hello SongsProvider Provider');
   }
 
@@ -35,48 +35,42 @@ export class SongsProvider {
   }
 
 
-  AddHolyMassMusic()
-  {
-    this.fileChooser.open().then(file=>{
-      this.filePath.resolveNativePath(file).then(resolvedFilePath =>{
-
-        const fileTransfer: FileTransferObject = this.transfer.create();
-
-        let options1: FileUploadOptions = {
-           fileKey: 'file',
-           fileName: resolvedFilePath ,
-           headers: {}
-        
-        }
-    
-    fileTransfer.upload(resolvedFilePath, 'http://endln.com/TNCCA/tncca_songs_upload.php', options1)
-     .then((data) => {
-       // success
-       alert("success");
-     }, (err) => {
-       // error
-       alert("error"+JSON.stringify(err));
-     });
-
-
-        alert(resolvedFilePath)
-      
-      })
-    })
-  }
+ 
 
   play(link)
   {
+    
     let URI = 'http://endln.com/TNCCA/'+ link
     let options: StreamingAudioOptions = {
       successCallback: () => { console.log('Audio played') },
       errorCallback: (e) => { console.log('Error streaming') },
-      initFullscreen: true,
-      bgImage:"http://endln.com/TNCCA/images/bg.jpeg"
+      initFullscreen: false,
+      bgImageScale: "fit", 
+      
+      bgImage:"http://endln.com/TNCCA/images/bg.jpg"
       
     };
     console.log(URI)
     this.streamingMedia.playAudio(URI, options);
 
+  }
+
+  presentLoading() {
+ 
+    this.loader = this.loadingCtrl.create({
+      content: " please wait Preparing song for you"
+    });
+ 
+    this.loader.present();
+ 
+  }
+
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Error occured while loading songs ',
+      subTitle: 'please check internet connection or reloading app',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 }

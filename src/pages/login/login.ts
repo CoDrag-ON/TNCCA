@@ -45,7 +45,7 @@ export class LoginPage {
   navLogin()
   {
     
-   if( this.email != null || this.password != null)
+   if( this.email != null && this.password != null)
     {
       this.presentLoading();
       this.auth.login(this.email,this.password).subscribe(data=>{

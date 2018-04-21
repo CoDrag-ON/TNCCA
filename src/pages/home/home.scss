@@ -1,18 +1,16 @@
 page-home {
     .fot{
        
-         padding-top: 20px;
-         font-size: 17.5px !important;
+         padding-top: 5px;
+         font-size: 15.5px !important;
     }
-    .header{
-        padding-top: -50px !important;
-    }
+   
 
-    ion-card-header{
+    ion-card-title{
         font-family: 'Cabin', sans-serif;
-        font-size: 27.5px !important;
-        color: white!important;
-        height: 70px!important;
+        font-size: 20.5px !important;
+        color:#ffffff !important;
+        height: 30px!important;
         
        
         
@@ -23,8 +21,8 @@ page-home {
        
         color:white !important;
        
-        min-height: 100px;
-        background: linear-gradient(30deg,rgb(33, 87, 153),rgb(55, 124, 209)) !important ;
+        min-height: 50px;
+        background: linear-gradient(45deg,rgb(74, 134, 207),rgb(73, 138, 216),rgb(90, 147, 218)) !important ;
         border-top-right-radius: 25px!important;
         border-bottom-left-radius: 25px!important;
         font-size: 30px!important;

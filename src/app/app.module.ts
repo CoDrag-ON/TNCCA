@@ -5,10 +5,6 @@ import { MyApp } from './app.component';
 import {FormsModule} from '@angular/forms';
 
 
-// Import the AF2 Module
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-
 import { IonicStorageModule } from '@ionic/storage';
 
  
@@ -59,17 +55,12 @@ import { SignupPage } from '../pages/signup/signup';
 
 import { SearchPipe } from '../pipes/search/search';
 import { SortPipe } from '../pipes/sort/sort';
+import { ActivityProvider } from '../providers/activity/activity';
+import { ActivityPage } from '../pages/activity/activity';
+import { HolyMassSongsPage } from '../pages/holy-mass-songs/holy-mass-songs';
 
 
-// AF2 Settings
-export const firebaseConfig = {
-  apiKey: "AIzaSyB8fgEcen6US2HR7v3RgNWA20MB-wy_Cqc",
-    authDomain: "cyril-2d6a1.firebaseapp.com",
-    databaseURL: "https://cyril-2d6a1.firebaseio.com",
-    projectId: "cyril-2d6a1",
-    storageBucket: "cyril-2d6a1.appspot.com",
-    messagingSenderId: "335454996480"
-};
+
 
 @NgModule({
   declarations: [
@@ -83,15 +74,16 @@ export const firebaseConfig = {
     SignupPage,
     QuerysPage, 
     SearchPipe,
-    SortPipe
+    SortPipe,
+    ActivityPage,
+    HolyMassSongsPage
   
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),   
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
+   
     HttpClientModule,
     HttpModule,
     FormsModule,
@@ -106,7 +98,9 @@ export const firebaseConfig = {
     SongsPage,
     HomePage,
     QuerysPage, 
-    SignupPage
+    SignupPage,
+    ActivityPage,
+    HolyMassSongsPage
   ],
   providers: [
     StatusBar,
@@ -130,6 +124,7 @@ export const firebaseConfig = {
     StreamingMedia,
     MsgCommentsProvider,
     BackgroundMode,
+    ActivityProvider,
   ]
 })
 export class AppModule {}

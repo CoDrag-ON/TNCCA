@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>activity</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+    <ion-card *ngFor="let ministry of All">
+        <ion-card-title align="center">
+            {{ministry.title}}
+            </ion-card-title>
+        <img src="{{ministry.img}}" height="200px"/>
+        <ion-card-content>
+          
+            <ion-label align="center" >
+              {{ministry.body}}
+            </ion-label>
+         
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>
