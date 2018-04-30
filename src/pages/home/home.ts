@@ -1,8 +1,10 @@
 import { Component, ViewChild,ElementRef } from '@angular/core';
-import { IonicPage,AlertController,LoadingController, NavController, NavParams } from 'ionic-angular';
+import { AlertController,LoadingController, NavController, NavParams } from 'ionic-angular';
 import { NewsProvider } from '../../providers/news/news';
 import { ModelProvider } from '../../providers/model/model';
 import { Content } from 'ionic-angular';
+
+
 /**
  * Generated class for the HomePage page.
  *
@@ -27,8 +29,9 @@ export class HomePage {
     private news:NewsProvider,
     private model:ModelProvider,
     public loadingCtrl: LoadingController,
-    public alertCtrl: AlertController) {
-
+    public alertCtrl: AlertController,
+    ) {
+      
      
     
   }
@@ -38,20 +41,17 @@ export class HomePage {
     this.news.getNews().subscribe((data)=>
     {
       this.Events = data
-      this.scrollToBottom();
+      
       console.log(data)
       this.loader.dismiss();
     },(error)=>{
+      this.loader.dismiss();
       this.showAlert();
     });
     
   }
 
-  scrollToBottom(): void {
-    setTimeout(()=>{
-      this.scroller.scrollToBottom(300)
-    },1000
-   )}
+  
 
   showComents(id)
   {

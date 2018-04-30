@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.endln.TNCCA" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.endln.TNCCA" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TNCCA</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="sam613263@gmail.com" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -90,6 +90,11 @@
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <allow-navigation href="http://192.168.42.178:8100" />
+    <allow-navigation href="http://192.168.42.109:8100" />
     <engine name="android" spec="~7.0.0" />
+<<<<<<< HEAD
     <plugin name="com.hutchind.cordova.plugins.streamingmedia" spec="~0.1.4" />
+=======
+    <plugin name="cordova-plugin-email-composer" spec="^0.8.15" />
+>>>>>>> a27386f151553fdd90e32b15082dfcfd9d673095
 </widget>

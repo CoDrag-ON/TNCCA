@@ -9,6 +9,9 @@
   <ion-navbar  color="primary">
     <ion-title>About</ion-title>
     <ion-buttons end>
+      <button ion-button (click)="openFeedback()">
+        FeedBack
+      </button>
       <button ion-button icon-only (click)="logout()">
         <ion-icon name="md-log-out"></ion-icon>
       </button>
@@ -28,7 +31,7 @@
   
   <ion-list>
     <ion-item>
-      <h6>
+      <h6 >
         Place
       </h6>
       <h4>
@@ -37,7 +40,7 @@
       
     </ion-item>
     <ion-item>
-        <h6>
+        <h6 >
             City
           </h6>
           <h4>
@@ -45,21 +48,23 @@
           </h4>
     </ion-item>
     <ion-item>
-        <h6>
+        <h6 >
             Parish
           </h6>
           <h4>
               {{Parish}}
           </h4>
     </ion-item>
+    <ion-item>
+        <h2  >{{About}}</h2>
+        
+      </ion-item>
     
   </ion-list>
 
   <ion-list>
     
-    <ion-item>
-      {{About}}
-    </ion-item>
+    
   </ion-list>
 
 
@@ -74,5 +79,6 @@
 
 
 </ion-content>
-<ion-footer padding-left padding-right>
+<ion-footer align="center">
+ contactus@endln.com
 </ion-footer>

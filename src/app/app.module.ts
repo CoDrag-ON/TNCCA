@@ -5,8 +5,11 @@ import { MyApp } from './app.component';
 import {FormsModule} from '@angular/forms';
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a27386f151553fdd90e32b15082dfcfd9d673095
 import { IonicStorageModule } from '@ionic/storage';
 
  
@@ -57,9 +60,17 @@ import { SignupPage } from '../pages/signup/signup';
 
 import { SearchPipe } from '../pipes/search/search';
 import { SortPipe } from '../pipes/sort/sort';
+import { ActivityProvider } from '../providers/activity/activity';
+import { ActivityPage } from '../pages/activity/activity';
+import { HolyMassSongsPage } from '../pages/holy-mass-songs/holy-mass-songs';
+import { FeedbackPage } from '../pages/feedback/feedback';
 
+import { EmailComposer } from '@ionic-native/email-composer'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a27386f151553fdd90e32b15082dfcfd9d673095
 
 @NgModule({
   declarations: [
@@ -73,15 +84,17 @@ import { SortPipe } from '../pipes/sort/sort';
     SignupPage,
     QuerysPage, 
     SearchPipe,
-    SortPipe
+    SortPipe,
+    ActivityPage,
+    HolyMassSongsPage,
+    FeedbackPage
   
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),   
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
+   
     HttpClientModule,
     HttpModule,
     FormsModule,
@@ -96,7 +109,10 @@ import { SortPipe } from '../pipes/sort/sort';
     SongsPage,
     HomePage,
     QuerysPage, 
-    SignupPage
+    SignupPage,
+    ActivityPage,
+    HolyMassSongsPage,
+    FeedbackPage
   ],
   providers: [
     StatusBar,
@@ -120,6 +136,8 @@ import { SortPipe } from '../pipes/sort/sort';
     StreamingMedia,
     MsgCommentsProvider,
     BackgroundMode,
+    ActivityProvider,
+    EmailComposer
   ]
 })
 export class AppModule {}

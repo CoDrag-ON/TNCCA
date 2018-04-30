@@ -1,0 +1,30 @@
+page-activity {
+    .fot{
+       
+       
+        font-size: 17.5px !important;
+   }
+  
+   ion-card-title{
+       font-family: 'Cabin', sans-serif;
+       font-size: 20.5px !important;
+       color: white!important;
+       height: 50px!important;
+       
+      
+       
+
+   }
+  
+   ion-card{ 
+      
+       color:white !important;
+      
+       min-height: 100px;
+       background: linear-gradient(145deg ,rgb(116, 75, 199),rgb(134, 96, 211),rgb(109, 55, 218)) !important ;
+       border-top-right-radius: 25px!important;
+       border-bottom-left-radius: 25px!important;
+       font-size: 30px!important;
+   
+   }
+}

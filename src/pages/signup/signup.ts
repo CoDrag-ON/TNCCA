@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, NavController,LoadingController, NavParams, ToastController } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
-import { LoadingController } from 'ionic-angular';
 import { ToastProvider } from '../../providers/toast/toast';
 
 
@@ -41,9 +40,7 @@ export class SignupPage {
      public toast:ToastProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
-  }
+ 
   SendData()
   {
       this.auth.insertUser(
@@ -66,17 +63,27 @@ export class SignupPage {
   }
 
   signup() {
-    let loader = this.loadingCtrl.create({
-      content: "Creating account",
-      duration: 3000
-    });
-    loader.present();
+    if(this.Name != null && this.DOB != null && this.Place != null &&this.City !==null &&
+    this.Parish != null && this.Diocese != null && this.TNCCA_zone != null &&
+  this.Aadhar_id != null &&this.Role_in_choir != null && this.Mobile != null &&
+this.About != null && this.Password != null){
+  let loader = this.loadingCtrl.create({
+    content: "Creating account",
+    duration: 3000
+  });
+  loader.present();
 
-    setTimeout(()=>{
-      this.SendData()
-      //this.navCtrl.pop()
+  setTimeout(()=>{
+    this.SendData()
+    this.navCtrl.pop()
 
-    })
+  })
+
+
+}else{
+  alert("Plase fill all detail in form")
+}
+    
   }
 
 }

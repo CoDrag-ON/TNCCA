@@ -1,10 +1,12 @@
 import { Component, ViewChild,ElementRef, OnInit } from '@angular/core';
-import { IonicPage, NavController,LoadingController,AlertController, NavParams } from 'ionic-angular';
+import { NavController,LoadingController,AlertController, NavParams } from 'ionic-angular';
 import { MessageProvider } from '../../providers/message/message';
 import { Storage } from '@ionic/storage';
 
 import { ModelProvider } from '../../providers/model/model';
 import { Content } from 'ionic-angular';
+
+
 
 
 
@@ -15,7 +17,7 @@ import { Content } from 'ionic-angular';
 })
 export class QuerysPage{
 
-  @ViewChild('scroller')  scroller: Content;
+  
   
 
   
@@ -33,7 +35,9 @@ export class QuerysPage{
     private storage: Storage,
     private model:ModelProvider,
     public loadingCtrl: LoadingController,
-    public alertCtrl: AlertController) {
+    public alertCtrl: AlertController,
+    ) {
+
 
       this.presentLoading();
       this.message.getQuery().subscribe(data=>
@@ -42,6 +46,7 @@ export class QuerysPage{
         console.log(data);
         this.loader.dismiss();
       },(error)=>{
+        this.loader.dismiss();
         this.showAlert();
       }) 
 
@@ -53,14 +58,10 @@ export class QuerysPage{
   }
 
   ionViewDidLoad() {
-    this.scrollToBottom();
+    
    
   }
-  scrollToBottom(): void {
-    setTimeout(()=>{
-      this.scroller.scrollToBottom(300)
-    },1000
-   )}
+ 
 
   sendMsg(){
 
@@ -72,7 +73,7 @@ export class QuerysPage{
         this.msg = "";
       })
       ,500)
-      this.scrollToBottom();
+     
   } 
   showComents(id){
     console.log(id);

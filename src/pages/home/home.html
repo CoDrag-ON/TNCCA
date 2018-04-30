@@ -13,14 +13,14 @@
   </ion-header>
 
 
-<ion-content #scroller class="bg-style" >
+<ion-content  class="bg-style" >
 
   <ion-list >
   
       <ion-card *ngFor="let event of Events" (click)="showComents(event?.id)">
-          <ion-card-header class="header" color = "primary" text-center>
+          <ion-card-title class="header" color = "primary" text-center>
             {{event?.title}}
-          </ion-card-header>
+          </ion-card-title>
           <ion-card-content class="fot" text-center>
               {{event?.body}}          
             </ion-card-content>

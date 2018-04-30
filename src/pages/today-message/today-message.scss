@@ -1,4 +1,7 @@
 page-today-message {
-
+    ::placeholder {
+        color: rgb(255, 255, 255)!important;
+        opacity: 1;
+    }
 
 }
