@@ -5,9 +5,7 @@ import { MyApp } from './app.component';
 import {FormsModule} from '@angular/forms';
 
 
-// Import the AF2 Module
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 
 import { IonicStorageModule } from '@ionic/storage';
 
@@ -61,15 +59,7 @@ import { SearchPipe } from '../pipes/search/search';
 import { SortPipe } from '../pipes/sort/sort';
 
 
-// AF2 Settings
-export const firebaseConfig = {
-  apiKey: "AIzaSyB8fgEcen6US2HR7v3RgNWA20MB-wy_Cqc",
-    authDomain: "cyril-2d6a1.firebaseapp.com",
-    databaseURL: "https://cyril-2d6a1.firebaseio.com",
-    projectId: "cyril-2d6a1",
-    storageBucket: "cyril-2d6a1.appspot.com",
-    messagingSenderId: "335454996480"
-};
+
 
 @NgModule({
   declarations: [

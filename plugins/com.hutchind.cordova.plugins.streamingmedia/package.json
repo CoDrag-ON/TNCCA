@@ -2,18 +2,18 @@
   "_args": [
     [
       {
-        "raw": "cordova-plugin-streaming-media@^1.0.2",
+        "raw": "cordova-plugin-streaming-media",
         "scope": null,
         "escapedName": "cordova-plugin-streaming-media",
         "name": "cordova-plugin-streaming-media",
-        "rawSpec": "^1.0.2",
-        "spec": ">=1.0.2 <2.0.0",
-        "type": "range"
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
       },
-      "D:\\Projects\\TNCCA"
+      "D:\\projects\\TNCCA"
     ]
   ],
-  "_from": "cordova-plugin-streaming-media@>=1.0.2 <2.0.0",
+  "_from": "cordova-plugin-streaming-media@latest",
   "_id": "cordova-plugin-streaming-media@1.0.2",
   "_inCache": true,
   "_location": "/cordova-plugin-streaming-media",
@@ -29,13 +29,13 @@
   "_npmVersion": "3.5.4",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "cordova-plugin-streaming-media@^1.0.2",
+    "raw": "cordova-plugin-streaming-media",
     "scope": null,
     "escapedName": "cordova-plugin-streaming-media",
     "name": "cordova-plugin-streaming-media",
-    "rawSpec": "^1.0.2",
-    "spec": ">=1.0.2 <2.0.0",
-    "type": "range"
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
   },
   "_requiredBy": [
     "#USER",
@@ -44,8 +44,8 @@
   "_resolved": "https://registry.npmjs.org/cordova-plugin-streaming-media/-/cordova-plugin-streaming-media-1.0.2.tgz",
   "_shasum": "d36848015325208a0f997fba4ce98067d92d2ccb",
   "_shrinkwrap": null,
-  "_spec": "cordova-plugin-streaming-media@^1.0.2",
-  "_where": "D:\\Projects\\TNCCA",
+  "_spec": "cordova-plugin-streaming-media",
+  "_where": "D:\\projects\\TNCCA",
   "author": {
     "name": "Nicholas Hutchind"
   },
