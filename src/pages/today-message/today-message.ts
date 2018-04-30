@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController ,LoadingController,AlertController, NavParams } from 'ionic-angular';
 import { SongsProvider } from '../../providers/songs/songs';
+import { HttpClient } from '@angular/common/http';
 
 @IonicPage()
 @Component({
@@ -9,38 +10,60 @@ import { SongsProvider } from '../../providers/songs/songs';
 })
 export class TodayMessagePage {
 
-  myDate:IDate;
-  todayDate = new Date();
+Allmsg:any
+loader: any;
 
   constructor(public navCtrl: NavController,
-     public navParams: NavParams,
-    public songs:SongsProvider) {}
+     public navParams: NavParams,private http:HttpClient,
+    public songs:SongsProvider,
+    public loadingCtrl: LoadingController,
+    public alertCtrl: AlertController,) {}
 
   ionViewDidLoad() {
-    var dd = this.todayDate.getDay();
-    var mm = this.todayDate.getMonth();
-    var yyyy = this.todayDate.getFullYear();
-
-    this.myDate = {
-      date : dd,
-      month : mm,
-      year : yyyy
-    }
+    this.getMessage()
   }
 
-  get(date)
-  {
-    console.log(date)
-  }
   play(link)
   {
     this.songs.play(link)
   }
 
+  getMessage(){
+    this.presentLoading()
+    let url = "http://endln.com/TNCCA/get_daily_message.php"
+    this.http.get(url).subscribe(data=>{
+      this.Allmsg = data
+      console.log(data)
+      this.loader.dismiss()
+    },(error=>
+    {
+      this.loader.dismiss()
+      this.showAlert()
+    }))
+
+  }
+
+  
+  presentLoading() {
+ 
+    this.loader = this.loadingCtrl.create({
+      content: "Loading Messages...."
+    });
+ 
+    this.loader.present();
+ 
+  }
+
+  showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Error occured while loading messages',
+      subTitle: 'please check internet connection',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
+
+
 }
 
- class IDate{
-  date:number;
-  month:number;
-  year:number;
-}
+ 

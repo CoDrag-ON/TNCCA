@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AlertController,LoadingController, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SongsProvider } from '../../providers/songs/songs';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 /**
  * Generated class for the HolyMassSongsPage page.
@@ -29,7 +30,8 @@ export class HolyMassSongsPage {
      public navParams: NavParams,
     private song:SongsProvider,
     public loadingCtrl: LoadingController,
-    public alertCtrl: AlertController,) {
+    public alertCtrl: AlertController,
+    private iab: InAppBrowser,) {
       this.presentLoading();
       this.song.getAllHollyMassSongs().subscribe(data=>{
         this.Songs = data;
@@ -72,6 +74,18 @@ export class HolyMassSongsPage {
       buttons: ['OK']
     });
     alert.present();
+  }
+
+  loadSite(){
+
+    const browser =  this.iab.create("http://bibleintamil.com/iraialai/starting-songtext.htm");
+
+  }
+
+  load(){
+
+    const browser = this.iab.create("http://bibleintamil.com/songstext/starting-songtext.htm");
+
   }
 
 

@@ -5,11 +5,6 @@ import { MyApp } from './app.component';
 import {FormsModule} from '@angular/forms';
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> a27386f151553fdd90e32b15082dfcfd9d673095
 import { IonicStorageModule } from '@ionic/storage';
 
  
@@ -65,12 +60,9 @@ import { ActivityPage } from '../pages/activity/activity';
 import { HolyMassSongsPage } from '../pages/holy-mass-songs/holy-mass-songs';
 import { FeedbackPage } from '../pages/feedback/feedback';
 
-import { EmailComposer } from '@ionic-native/email-composer'
+import { EmailComposer } from '@ionic-native/email-composer';
+import { ResponseSongsPage } from '../pages/response-songs/response-songs';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> a27386f151553fdd90e32b15082dfcfd9d673095
 
 @NgModule({
   declarations: [
@@ -87,7 +79,8 @@ import { EmailComposer } from '@ionic-native/email-composer'
     SortPipe,
     ActivityPage,
     HolyMassSongsPage,
-    FeedbackPage
+    FeedbackPage,
+    ResponseSongsPage
   
   ],
   imports: [
@@ -112,7 +105,8 @@ import { EmailComposer } from '@ionic-native/email-composer'
     SignupPage,
     ActivityPage,
     HolyMassSongsPage,
-    FeedbackPage
+    FeedbackPage,
+    ResponseSongsPage
   ],
   providers: [
     StatusBar,

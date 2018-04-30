@@ -4,21 +4,18 @@
   <ion-navbar>
     
   </ion-navbar>
-  <ion-navbar  color="primary" >
-      <ion-title  align="center" >
-       
-        <ion-datetime #c (ionChange)="get(myDate)"  displayFormat="DD-MM-YYYY" [(ngModel)]="myDate" >
-            {{myDate?.date}}  {{myDate?.month}} {{myDate?.year}}
-        </ion-datetime>
-        <ion-label>
-          
-        </ion-label>
-      </ion-title>
-  </ion-navbar>
-
+ 
 </ion-header>
 
 
 <ion-content class="bg-style" padding>
+
+  <ion-list>
+    <button ion-item *ngFor="let msg of Allmsg" (click)="play(msg.link)">
+      {{msg.date}}
+    </button>
+  </ion-list>
+
+ 
 
 </ion-content>

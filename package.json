@@ -79,11 +79,7 @@
       "cordova-plugin-filepath": {},
       "cordova-plugin-background-mode": {},
       "cordova-plugin-statusbar": {},
-<<<<<<< HEAD
-      "com.hutchind.cordova.plugins.streamingmedia": {}
-=======
       "cordova-plugin-email-composer": {}
->>>>>>> a27386f151553fdd90e32b15082dfcfd9d673095
     },
     "platforms": [
       "android"
