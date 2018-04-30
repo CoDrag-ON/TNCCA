@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 
 import { Storage } from '@ionic/storage';
+import { FeedbackPage } from '../feedback/feedback';
 
 
 
@@ -115,6 +116,10 @@ export class AboutPage {
     this.navCtrl.setRoot("LoginPage")
     this.storage.clear();
     this.storage.set('LoggedIn', false);
+  }
+  openFeedback()
+  {
+    this.navCtrl.push(FeedbackPage)
   }
 
  

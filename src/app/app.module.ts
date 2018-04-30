@@ -58,8 +58,9 @@ import { SortPipe } from '../pipes/sort/sort';
 import { ActivityProvider } from '../providers/activity/activity';
 import { ActivityPage } from '../pages/activity/activity';
 import { HolyMassSongsPage } from '../pages/holy-mass-songs/holy-mass-songs';
+import { FeedbackPage } from '../pages/feedback/feedback';
 
-
+import { EmailComposer } from '@ionic-native/email-composer'
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { HolyMassSongsPage } from '../pages/holy-mass-songs/holy-mass-songs';
     SearchPipe,
     SortPipe,
     ActivityPage,
-    HolyMassSongsPage
+    HolyMassSongsPage,
+    FeedbackPage
   
   ],
   imports: [
@@ -100,7 +102,8 @@ import { HolyMassSongsPage } from '../pages/holy-mass-songs/holy-mass-songs';
     QuerysPage, 
     SignupPage,
     ActivityPage,
-    HolyMassSongsPage
+    HolyMassSongsPage,
+    FeedbackPage
   ],
   providers: [
     StatusBar,
@@ -125,6 +128,7 @@ import { HolyMassSongsPage } from '../pages/holy-mass-songs/holy-mass-songs';
     MsgCommentsProvider,
     BackgroundMode,
     ActivityProvider,
+    EmailComposer
   ]
 })
 export class AppModule {}

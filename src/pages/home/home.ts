@@ -41,7 +41,7 @@ export class HomePage {
     this.news.getNews().subscribe((data)=>
     {
       this.Events = data
-      this.scrollToBottom();
+      
       console.log(data)
       this.loader.dismiss();
     },(error)=>{
@@ -51,11 +51,7 @@ export class HomePage {
     
   }
 
-  scrollToBottom(): void {
-    setTimeout(()=>{
-      this.scroller.scrollToBottom(300)
-    },1000
-   )}
+  
 
   showComents(id)
   {

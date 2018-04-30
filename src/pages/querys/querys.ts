@@ -17,7 +17,7 @@ import { Content } from 'ionic-angular';
 })
 export class QuerysPage{
 
-  @ViewChild('scroller')  scroller: Content;
+  
   
 
   
@@ -58,14 +58,10 @@ export class QuerysPage{
   }
 
   ionViewDidLoad() {
-    this.scrollToBottom();
+    
    
   }
-  scrollToBottom(): void {
-    setTimeout(()=>{
-      this.scroller.scrollToBottom(300)
-    },1000
-   )}
+ 
 
   sendMsg(){
 
@@ -77,7 +73,7 @@ export class QuerysPage{
         this.msg = "";
       })
       ,500)
-      this.scrollToBottom();
+     
   } 
   showComents(id){
     console.log(id);
