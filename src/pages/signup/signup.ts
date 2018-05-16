@@ -81,7 +81,7 @@ this.About != null && this.Password != null){
 
 
 }else{
-  alert("Plase fill all detail in form")
+  alert("Please fill in all detail")
 }
     
   }

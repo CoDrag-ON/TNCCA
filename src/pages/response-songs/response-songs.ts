@@ -41,6 +41,7 @@ export class ResponseSongsPage {
       console.log(data)
       this.loader.dismiss()
     },error=>{
+      this.loader.dismiss()
       this.showAlert()
     })
   }

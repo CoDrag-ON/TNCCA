@@ -64,6 +64,7 @@ export class QuerysPage{
  
 
   sendMsg(){
+    
 
     console.log(this.name,this.msg)
     this.message.sendQuery(this.name,this.msg);
@@ -83,7 +84,7 @@ export class QuerysPage{
   presentLoading() {
  
     this.loader = this.loadingCtrl.create({
-      content: "Loading Messages...."
+      content: "Loading messages...."
     });
  
     this.loader.present();
